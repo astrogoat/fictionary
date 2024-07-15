@@ -18,8 +18,8 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix
-    // .postCss('resources/css/fictionary.css', 'css', [require('tailwindcss')('tailwind.config.js')])
-    // .js('resources/js/fictionary.js', 'js')
-    // .version()
-    // .setPublicPath('public/')
+mix
+    .postCss('resources/css/fictionary.css', 'css', [require('tailwindcss')('tailwind.config.js')])
+    .js('resources/js/fictionary.js', 'js')
+    .version()
+    .setPublicPath('public/')
