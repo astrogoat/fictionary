@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Fictionary;
 
-use Livewire\Livewire;
-use Helix\Lego\Apps\App;
-use Spatie\LaravelPackageTools\Package;
-use Helix\Lego\Apps\AppPackageServiceProvider;
 use Astrogoat\Fictionary\Settings\FictionarySettings;
+use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\AppPackageServiceProvider;
+use Livewire\Livewire;
+use Spatie\LaravelPackageTools\Package;
 
 class FictionaryServiceProvider extends AppPackageServiceProvider
 {
@@ -39,7 +39,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         $package->name('fictionary')->hasConfigFile()->hasViews();
 
         $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/fictionary')
+            __DIR__.'/../public' => public_path('vendor/fictionary'),
         ], 'public');
     }
 

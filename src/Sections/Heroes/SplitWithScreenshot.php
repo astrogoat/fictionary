@@ -4,14 +4,14 @@ namespace Astrogoat\Fictionary\Sections\Heroes;
 
 use Closure;
 use Exception;
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Link;
-use Helix\Lego\Bricks\Input;
-use Helix\Lego\Bricks\Media;
-use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Button;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Checkbox;
+use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Input;
+use Helix\Lego\Bricks\Link;
+use Helix\Lego\Bricks\Media;
+use Helix\Lego\Bricks\Select;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class SplitWithScreenshot extends Section
@@ -39,7 +39,7 @@ class SplitWithScreenshot extends Section
                         'fic-h-20' => 'Large',
                         'fic-h-24' => 'Extra Large',
                         '' => 'Full',
-                    ])
+                    ]),
                 ]),
             'screenshot' => Media::name('Screenshot')->maxFiles(1),
             'update' => Group::name('Update')
@@ -80,6 +80,7 @@ class SplitWithScreenshot extends Section
 
         $this->signUpSuccessful = true;
         $this->subscribedMessage = 'Thank up for signing up!';
+
         return null;
     }
 }

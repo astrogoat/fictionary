@@ -2,11 +2,9 @@
 
 namespace Astrogoat\Fictionary\Sections\CTAs;
 
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Heading;
-use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Link;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class SimpleJustified extends Section

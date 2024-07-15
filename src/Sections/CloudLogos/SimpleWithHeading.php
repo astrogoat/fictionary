@@ -2,12 +2,11 @@
 
 namespace Astrogoat\Fictionary\Sections\CloudLogos;
 
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Media;
-use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Heading;
+use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Select;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class SimpleWithHeading extends Section
