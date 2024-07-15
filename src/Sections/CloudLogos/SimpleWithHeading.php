@@ -62,10 +62,10 @@ class SimpleWithHeading extends Section
     {
         return match ($this->get('density')->getKey()) {
             'extra-tight' => '',
-            'tight' => 'fic-max-w-lg fic-grid-cols-5 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-7 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-6',
-            default => 'fic-max-w-lg fic-grid-cols-4 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-6 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-5',
-            'spacious' => 'fic-max-w-lg fic-grid-cols-3 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-5 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-4',
-            'extra-spacious' => 'fic-max-w-lg fic-grid-cols-2 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-4 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-3',
+            'tight' => 'fic-max-w-lg fic-grid-cols-3 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-7 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-6',
+            default => 'fic-max-w-lg fic-grid-cols-2 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-6 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-5',
+            'spacious' => 'fic-max-w-lg fic-grid-cols-2 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-5 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-4',
+            'extra-spacious' => 'fic-max-w-lg fic-grid-cols-1 fic-gap-x-8 fic-gap-y-10 sm:fic-max-w-xl sm:fic-grid-cols-4 sm:fic-gap-x-10 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-3',
         };
     }
 

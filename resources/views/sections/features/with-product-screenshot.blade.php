@@ -1,7 +1,7 @@
 <x-lego::section :section="$this">
     <div class="fic-overflow-hidden">
         <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
-            <div class="fic-mx-auto fic-grid fic-max-w-2xl fic-grid-cols-1 fic-gap-x-8 fic-gap-y-16 sm:fic-gap-y-20 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-2">
+            <div class="fic-mx-auto fic-grid fic-max-w-2xl fic-grid-cols-1 fic-gap-x-8 fic-gap-y-8 sm:fic-gap-y-20 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-2">
                 <div class="lg:fic-ml-auto lg:fic-pl-4 lg:fic-pt-4">
                     <div class="lg:fic-max-w-lg">
                         {!! $this->get('eyebrow')->class('fic-text-base fic-font-semibold fic-leading-7 fic-text-primary') !!}
