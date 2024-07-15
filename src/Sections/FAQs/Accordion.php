@@ -2,10 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\FAQs;
 
-use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Heading;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class Accordion extends Section
@@ -24,7 +24,7 @@ class Accordion extends Section
                 ->bricks([
                     'question' => Text::name('Question')->renderAsElement('span'),
                     'answer' => Text::name('Answer')->multipleLines()->renderAsElement('p'),
-                ])
+                ]),
         ];
     }
 }

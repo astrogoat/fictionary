@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Fictionary\Tests;
 
+use Astrogoat\Fictionary\FictionaryServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Fictionary\FictionaryServiceProvider;
 
 class TestCase extends Orchestra
 {

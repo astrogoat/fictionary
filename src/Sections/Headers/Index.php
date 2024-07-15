@@ -2,10 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\Headers;
 
-use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Heading;
+use Helix\Lego\Bricks\Select;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class Index extends Section
@@ -25,7 +25,7 @@ class Index extends Section
                             'md' => 'Medium',
                             'lg' => 'Large',
                         ])
-                        ->default('lg')
+                        ->default('lg'),
                 ]),
             'description' => Group::name('Description')->bricks([
                 'copy' => Text::name('Description')->multipleLines()->renderAsElement('p'),
@@ -40,8 +40,8 @@ class Index extends Section
                         'normal' => 'Normal',
                         'wide' => 'Wide',
                     ])
-                    ->default('normal')
-            ])
+                    ->default('normal'),
+            ]),
         ];
     }
 

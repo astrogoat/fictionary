@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Fictionary\Sections\Features;
 
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Select;
+use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Select;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class WithProductScreenshot extends Section
@@ -34,8 +34,8 @@ class WithProductScreenshot extends Section
                             'left' => 'Left',
                             'right' => 'Right',
                         ])
-                        ->default('right')
-                ])
+                        ->default('right'),
+                ]),
         ];
     }
 }
