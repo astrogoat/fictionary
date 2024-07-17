@@ -7,6 +7,7 @@ use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
+use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Http\Livewire\Section;
 
 class WithProductScreenshot extends Section
@@ -20,7 +21,16 @@ class WithProductScreenshot extends Section
             'heading' => Text::name('Heading'),
             'description' => Text::name('Description')->multipleLines()->renderAsElement('p'),
             'eyebrow' => Text::name('Eyebrow')->renderAsElement('h2'),
-            'screenshot' => Media::name('Screenshot')->maxFiles(1),
+            'image' => Group::name('Image')->bricks([
+                'media' => Media::name('Image')->maxFiles(1),
+                'size' => Select::name('Size')->options([
+                    'xs' => 'Extra small',
+                    'sm' => 'Small',
+                    'md' => 'Medium',
+                    'lg' => 'Large',
+                ])->default('md'),
+                'shadow' => Checkbox::name('Add shadow to image')->default(true),
+            ]),
             'callouts' => Repeater::name('Callouts')
                 ->bricks([
                     'title' => Text::name('Title')->renderAsElement(false),
@@ -37,5 +47,20 @@ class WithProductScreenshot extends Section
                         ->default('right'),
                 ]),
         ];
+    }
+
+    public function getImageWidthCss(): string
+    {
+        return match ($this->get('image.size')->key) {
+            'xs' => 'fic-w-[32rem] sm:fic-w-[42rem]',
+            'sm' => 'fic-w-[40rem] sm:fic-w-[47rem]',
+            default => 'fic-w-[48rem] sm:fic-w-[57rem]',
+            'lg' => 'fic-w-[56rem] sm:fic-w-[67rem]',
+        };
+    }
+
+    public function getImageShadowCss(): string
+    {
+        return $this->get('image.shadow')->isChecked() ? ' fic-shadow-xl ' : '';
     }
 }

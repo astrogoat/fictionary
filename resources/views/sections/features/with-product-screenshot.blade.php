@@ -20,8 +20,8 @@
                         </dl>
                     </div>
                 </div>
-                <div class="{{ $this->get('container.layout')->getKey() === 'left' ? 'fic-flex fic-items-start fic-justify-end lg:fic-order-first' : '' }}">
-                    {!! $this->get('screenshot')->class('fic-w-[48rem] fic-max-w-none fic-rounded-xl fic-shadow-xl fic-ring-1 fic-ring-gray-400/10 sm:fic-w-[57rem] md:fic--ml-4 lg:fic--ml-0') !!}
+                <div class="fic-flex fic-items-start {{ $this->get('container.layout')->getKey() === 'left' ? 'fic-justify-end lg:fic-order-first' : 'fic-justify-start' }}">
+                    {!! $this->get('image.media')->class($this->getImageWidthCss() . ' fic-max-w-none fic-rounded-xl' . $this->getImageShadowCss() . 'fic-ring-1 fic-ring-gray-400/10 md:fic--ml-4 lg:fic--ml-0') !!}
                 </div>
             </div>
         </div>
