@@ -2,10 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\Marketing\Pricing;
 
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Editor;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
 class SinglePriceWithDetails extends Section
