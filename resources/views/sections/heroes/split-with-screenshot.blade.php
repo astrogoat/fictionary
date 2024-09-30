@@ -12,7 +12,7 @@
             <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"/>
         </svg>
         <div
-            class="fic-mx-auto fic-max-w-7xl fic-px-6 fic-pb-24 fic-pt-10 sm:fic-pb-32 lg:fic-flex lg:fic-px-8 lg:fic-py-40">
+            class="fic-mx-auto fic-max-w-7xl fic-px-6 fic-pb-24 fic-pt-10 lg:fic-flex lg:fic-px-8">
             <div class="fic-mx-auto fic-max-w-2xl lg:fic-mx-0 lg:fic-max-w-xl lg:fic-flex-shrink-0 lg:fic-pt-8">
                 {!! $this->get('logo.media')->first()->removeWidth()->removeHeight()->class($this->get('logo.height')->key) !!}
 

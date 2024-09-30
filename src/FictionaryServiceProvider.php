@@ -27,6 +27,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\FAQs\Accordion::class,
                 Sections\Features\WithProductScreenshot::class,
                 Sections\CTAs\SimpleJustified::class,
+                Sections\Marketing\Pricing\SinglePriceWithDetails::class,
 
             ])
             ->publishOnInstall(['public'])
@@ -45,7 +46,6 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
 
     public function bootingPackage()
     {
-        Livewire::component('astrogoat.fictionary.sections.stats-simple', Simple::class);
         Livewire::component('astrogoat.fictionary.sections.heroes.split-with-screenshot', Sections\Heroes\SplitWithScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.cloud-logos.simple-with-heading', Sections\CloudLogos\SimpleWithHeading::class);
         Livewire::component('astrogoat.fictionary.sections.headers.index', Sections\Headers\Index::class);
@@ -53,5 +53,6 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.features.with-product-screenshot', Sections\Features\WithProductScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.c-t-as.simple-justified', Sections\CTAs\SimpleJustified::class);
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
+        Livewire::component('astrogoat.fictionary.sections.marketing.pricing.single-price-with-details', Sections\Marketing\Pricing\SinglePriceWithDetails::class);
     }
 }
