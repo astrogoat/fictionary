@@ -22,6 +22,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
             ->sections([
                 Sections\Stats\Simple::class,
                 Sections\Heroes\SplitWithScreenshot::class,
+                Sections\Heroes\SimpleCenteredWithBackgroundImage::class,
                 Sections\CloudLogos\SimpleWithHeading::class,
                 Sections\Headers\Index::class,
                 Sections\FAQs\Accordion::class,
@@ -47,6 +48,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
     public function bootingPackage()
     {
         Livewire::component('astrogoat.fictionary.sections.heroes.split-with-screenshot', Sections\Heroes\SplitWithScreenshot::class);
+        Livewire::component('astrogoat.fictionary.sections.heroes.simple-centered-with-background-image', Sections\Heroes\SimpleCenteredWithBackgroundImage::class);
         Livewire::component('astrogoat.fictionary.sections.cloud-logos.simple-with-heading', Sections\CloudLogos\SimpleWithHeading::class);
         Livewire::component('astrogoat.fictionary.sections.headers.index', Sections\Headers\Index::class);
         Livewire::component('astrogoat.fictionary.sections.f-a-qs.accordion', Sections\FAQs\Accordion::class);
