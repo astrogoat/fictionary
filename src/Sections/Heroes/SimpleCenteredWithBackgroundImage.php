@@ -15,6 +15,7 @@ use Helix\Lego\Media\Transformations\Transformation;
 class SimpleCenteredWithBackgroundImage extends Section
 {
     protected string $view = 'fictionary::sections.heroes.simple-centered-with-background-image';
+    protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/heroes/simple-centered-with-background-image.jpg';
 
     public function bricks(): array
     {
@@ -75,7 +76,9 @@ class SimpleCenteredWithBackgroundImage extends Section
                 'color' => Select::name('Color')->options([
                     'fic-text-white' => 'White',
                     'fic-text-black' => 'Black',
-                    'fic-text-gray-400' => 'Gray',
+                    'fic-text-gray-400' => 'Light Gray',
+                    'fic-text-gray-300' => 'Lighter Gray',
+                    'fic-text-gray-200' => 'Lightest Gray',
                 ])->default('fic-text-gray-400'),
                 'max-width' => Select::name('Max width')->options([
                     'fic-max-w-2xl' => 'Narrowest',
