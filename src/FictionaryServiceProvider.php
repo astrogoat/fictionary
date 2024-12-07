@@ -27,6 +27,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Headers\Index::class,
                 Sections\FAQs\Accordion::class,
                 Sections\Features\WithProductScreenshot::class,
+                Sections\Features\OffsetWithFeatureList::class,
                 Sections\CTAs\SimpleCentered::class,
                 Sections\CTAs\SimpleJustified::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
@@ -54,6 +55,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.headers.index', Sections\Headers\Index::class);
         Livewire::component('astrogoat.fictionary.sections.f-a-qs.accordion', Sections\FAQs\Accordion::class);
         Livewire::component('astrogoat.fictionary.sections.features.with-product-screenshot', Sections\Features\WithProductScreenshot::class);
+        Livewire::component('astrogoat.fictionary.sections.features.offset-with-feature-list', Sections\Features\OffsetWithFeatureList::class);
         Livewire::component('astrogoat.fictionary.sections.c-t-as.simple-centered', Sections\CTAs\SimpleCentered::class);
         Livewire::component('astrogoat.fictionary.sections.c-t-as.simple-justified', Sections\CTAs\SimpleJustified::class);
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
