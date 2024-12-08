@@ -33,6 +33,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\CTAs\SimpleJustified::class,
                 Sections\CTAs\CenteredOnDarkPanel::class,
                 Sections\CTAs\DarkPanelWithImage::class,
+                Sections\Pricing\TwoTiersWithExtraTier::class,
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
 
@@ -66,6 +67,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.c-t-as.centered-on-dark-panel', Sections\CTAs\CenteredOnDarkPanel::class);
         Livewire::component('astrogoat.fictionary.sections.c-t-as.dark-panel-with-image', Sections\CTAs\DarkPanelWithImage::class);
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
+        Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-extra-tier', Sections\Pricing\TwoTiersWithExtraTier::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-emphasized-tier', Sections\Pricing\TwoTiersWithEmphasizedTier::class);
         Livewire::component('astrogoat.fictionary.sections.marketing.pricing.single-price-with-details', Sections\Marketing\Pricing\SinglePriceWithDetails::class);
     }
