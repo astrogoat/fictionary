@@ -12,38 +12,28 @@ use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 use Illuminate\Support\Facades\Blade;
+use Astrogoat\Fictionary\Traits\CommonSection;
 
 class OffsetWithFeatureList extends Section
 {
+    use CommonSection;
+
     protected string $view = 'fictionary::sections.features.offset-with-feature-list';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/features/offset-with-feature-list.jpg';
 
     public function bricks(): array
     {
-        $icons = collect(['' => '-- Select icon --'])
-            ->push(...(new ReflectionClass(Icon::class))->getConstants())
-            ->mapWithKeys(function ($value, $key) {
-                if ($key === '') {
-                    return ['' => $value];
-                }
-
-                return [$value => Str::of($value)->replace('-', ' ')->ucfirst()->toString()];
-            });
-
         return [
             'heading' => Text::name('Heading')->renderAsElement('p'),
             'description' => Text::name('Description')->multipleLines()->renderAsElement('p'),
             'eyebrow' => Text::name('Eyebrow')->renderAsElement('h2'),
             'callouts' => Group::name('Callouts')->bricks([
-                'icon' => Select::name('Icon')->options($icons),
+                ...$this->iconsBrick(),
                 'items' => Repeater::name('Callouts')
                     ->bricks([
                         'title' => Text::name('Title')->renderAsElement(false),
                         'description' => Text::name('Description')->renderAsElement('dd'),
-                        'icon' => Group::name('Icon')->bricks([
-                            'element' => Select::name('Icon')->options($icons),
-                            'customIcon' => Media::name('Custom icon')->maxFiles(1),
-                        ]),
+                        ...$this->iconsWithCustomIconBrick(),
                     ]),
 
             ])
@@ -52,11 +42,11 @@ class OffsetWithFeatureList extends Section
 
     public function getCalloutIcon($callout)
     {
-        if ($callout->icon->customIcon->hasMedia()) {
+        if ($callout->icon?->customIcon->hasMedia()) {
             return $callout->icon->customIcon->class('fic-absolute fic-left-0 fic-top-1 fic-w-6 fic-text-indigo-500');
         }
 
-        if ($callout->icon->element->key) {
+        if ($callout->icon?->element->key) {
             return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-indigo-500" />', ['icon' => $callout->icon->element->key]);
         }
 

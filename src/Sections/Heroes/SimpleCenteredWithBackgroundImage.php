@@ -10,34 +10,20 @@ use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Number;
 use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Http\Livewire\Section;
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Media\Transformations\Transformation;
 
 class SimpleCenteredWithBackgroundImage extends Section
 {
+    use CommonSection;
+
     protected string $view = 'fictionary::sections.heroes.simple-centered-with-background-image';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/heroes/simple-centered-with-background-image.jpg';
 
     public function bricks(): array
     {
         return [
-            'background' => Group::name('Background image')->bricks([
-                'image' => Media::name('Image')->maxFiles(1),
-                'should-apply-transformation' => Checkbox::name('Apply image transformation'),
-                'transformations' => Group::name('Transformations')
-                    ->when(fn () => $this->getBrickCurrentValue('background.should-apply-transformation'))
-                    ->bricks([
-                        'grayscale' => Group::name('Grayscale')->bricks([
-                            'enabled' => Checkbox::name('Make grayscale')->default(true),
-                        ]),
-                        'color' => Group::name('Color')->bricks([
-                            'hex' => Text::name('HEX')->default('#0D0D20')->help('Should be a HEX code.'),
-                            'strength' => Number::name('Strength')->default(80)->help('Between 0-80.')->min(0)->max(100),
-                        ]),
-                        'blur' => Group::name('Blur')->bricks([
-                            'strength' => Number::name('Strength')->default('0')->help('Between 0-2000')->min(0)->max(2000),
-                        ]),
-                    ]),
-            ]),
+            ...$this->backgroundImageWithTransformationsBrick(),
             'pill' => Group::name('Pill')->bricks([
                 'content' => Text::name('Content')->renderAsElement(false),
                 'link' => Link::name('Link'),
@@ -94,31 +80,5 @@ class SimpleCenteredWithBackgroundImage extends Section
                 'secondary' => Link::name('Secondary CTA'),
             ]),
         ];
-    }
-
-    public function getBackgroundImage()
-    {
-        $image = $this->get('background.image')->first()->class('fic-absolute fic-inset-0 fic--z-10 fic-size-full fic-object-cover');
-
-        if ($this->get('background.should-apply-transformation')->isChecked()) {
-            $transformations = Transformation::new();
-
-            if ($this->get('background.transformations.grayscale.enabled')->isChecked()) {
-                $transformations->grayscale();
-            }
-
-            if ($this->get('background.transformations.blur.strength')->getValue() > 0) {
-                $transformations->blur(1000);
-            }
-
-            if ($this->get('background.transformations.color.strength')->getValue() > 0) {
-                $transformations->colorize($this->get('background.transformations.color.strength')->getValue(), $this->get('background.transformations.color.hex')->getValue());
-            }
-
-
-            $image->transformation($transformations);
-        }
-
-        return $image;
     }
 }

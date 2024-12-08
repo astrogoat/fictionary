@@ -7,26 +7,19 @@ use Helix\Lego\Bricks\Heading;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
+use Astrogoat\Fictionary\Traits\CommonSection;
 
 class Centered extends Section
 {
+    use CommonSection;
+
     protected string $view = 'fictionary::sections.headers.centered';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/headers/centered.jpg';
 
     public function bricks(): array
     {
         return [
-            'heading' => Group::name('Heading')
-                ->bricks([
-                    'copy' => Heading::name('Heading')->defaultElement('h2'),
-                    'size' => Select::name('Size')
-                        ->options([
-                            'sm' => 'Small',
-                            'md' => 'Medium',
-                            'lg' => 'Large',
-                        ])
-                        ->default('lg'),
-                ]),
+            $this->headingWithSizeBrick(),
             'description' => Group::name('Description')->bricks([
                 'copy' => Text::name('Description')->multipleLines()->renderAsElement('p'),
             ]),
@@ -43,15 +36,6 @@ class Centered extends Section
                     ->default('normal'),
             ]),
         ];
-    }
-
-    public function getHeadingSizeCss(): string
-    {
-        return match ($this->get('heading.size')->getKey()) {
-            'sm' => 'fic-text-lg sm:fic-text-2xl',
-            'md' => 'fic-text-2xl sm:fic-text-4xl',
-            default => 'fic-text-4xl sm:fic-text-6xl',
-        };
     }
 
     public function getContainerMaxWidthCss(): string
