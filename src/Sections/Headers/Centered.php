@@ -8,10 +8,10 @@ use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
-class Index extends Section
+class Centered extends Section
 {
-    protected string $view = 'fictionary::sections.headers.index';
-    protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/headers/index.jpg';
+    protected string $view = 'fictionary::sections.headers.centered';
+    protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/headers/centered.jpg';
 
     public function bricks(): array
     {
