@@ -6,6 +6,7 @@ use Str;
 use ReflectionClass;
 use Helix\Fabrick\Icon;
 use Helix\Lego\Bricks\Text;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Number;
@@ -86,6 +87,16 @@ trait CommonSection
             'icon' => Group::name('Icon')->bricks([
                 'element' => Select::name('Icon')->options($this->getIcons()),
                 'customIcon' => Media::name('Custom icon')->maxFiles(1),
+            ]),
+        ];
+    }
+
+    public function ctasBrick(): array
+    {
+        return [
+            'ctas' => Group::name('CTA')->bricks([
+                'primary' => Link::name('Primary CTA'),
+                'secondary' => Link::name('Secondary CTA'),
             ]),
         ];
     }
