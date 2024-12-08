@@ -25,6 +25,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Heroes\SimpleCenteredWithBackgroundImage::class,
                 Sections\CloudLogos\SimpleWithHeading::class,
                 Sections\Headers\Centered::class,
+                Sections\Headers\WithCards::class,
                 Sections\FAQs\Accordion::class,
                 Sections\Features\WithProductScreenshot::class,
                 Sections\Features\OffsetWithFeatureList::class,
@@ -53,6 +54,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.heroes.simple-centered-with-background-image', Sections\Heroes\SimpleCenteredWithBackgroundImage::class);
         Livewire::component('astrogoat.fictionary.sections.cloud-logos.simple-with-heading', Sections\CloudLogos\SimpleWithHeading::class);
         Livewire::component('astrogoat.fictionary.sections.headers.centered', Sections\Headers\Centered::class);
+        Livewire::component('astrogoat.fictionary.sections.headers.with-cards', Sections\Headers\WithCards::class);
         Livewire::component('astrogoat.fictionary.sections.f-a-qs.accordion', Sections\FAQs\Accordion::class);
         Livewire::component('astrogoat.fictionary.sections.features.with-product-screenshot', Sections\Features\WithProductScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.features.offset-with-feature-list', Sections\Features\OffsetWithFeatureList::class);
