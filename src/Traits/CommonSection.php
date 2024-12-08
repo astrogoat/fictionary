@@ -137,17 +137,4 @@ trait CommonSection
             '2xl' => 'fic-text-5xl sm:fic-text-7xl',
         };
     }
-
-    public function renderIcon($element)
-    {
-        if ($callout->icon->customIcon->hasMedia()) {
-            return $callout->icon->customIcon->class('fic-absolute fic-left-0 fic-top-1 fic-w-6 fic-text-indigo-500');
-        }
-
-        if ($callout->icon->element->key) {
-            return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-indigo-500" />', ['icon' => $callout->icon->element->key]);
-        }
-
-        return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-indigo-500" />', ['icon' => $this->get('callouts.icon')->key]);
-    }
 }
