@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\Heroes;
+namespace Astrogoat\Fictionary\Sections\Hero;
 
 use Closure;
 use Exception;

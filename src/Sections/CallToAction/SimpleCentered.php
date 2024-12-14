@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\CTAs;
+namespace Astrogoat\Fictionary\Sections\CallToAction;
 
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Link;

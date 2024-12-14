@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\CloudLogos;
+namespace Astrogoat\Fictionary\Sections\CloudLogo;
 
 use Helix\Lego\Bricks\Heading;
 use Helix\Lego\Bricks\Media;

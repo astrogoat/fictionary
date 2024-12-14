@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\Features;
+namespace Astrogoat\Fictionary\Sections\Feature;
 
 use Str;
 use ReflectionClass;

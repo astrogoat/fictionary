@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\Heroes;
+namespace Astrogoat\Fictionary\Sections\Hero;
 
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Link;

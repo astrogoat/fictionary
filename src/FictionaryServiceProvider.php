@@ -20,19 +20,19 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 __DIR__ . '/../database/migrations/settings',
             ])
             ->sections([
+                Sections\FrequentlyAskedQuestion\Accordion::class,
                 Sections\Stats\Simple::class,
-                Sections\Heroes\SplitWithScreenshot::class,
-                Sections\Heroes\SimpleCenteredWithBackgroundImage::class,
-                Sections\CloudLogos\SimpleWithHeading::class,
-                Sections\Headers\Centered::class,
-                Sections\Headers\WithCards::class,
-                Sections\FAQs\Accordion::class,
-                Sections\Features\WithProductScreenshot::class,
-                Sections\Features\OffsetWithFeatureList::class,
-                Sections\CTAs\SimpleCentered::class,
-                Sections\CTAs\SimpleJustified::class,
-                Sections\CTAs\CenteredOnDarkPanel::class,
-                Sections\CTAs\DarkPanelWithImage::class,
+                Sections\Hero\SplitWithScreenshot::class,
+                Sections\Hero\SimpleCenteredWithBackgroundImage::class,
+                Sections\CloudLogo\SimpleWithHeading::class,
+                Sections\Header\Centered::class,
+                Sections\Header\WithCards::class,
+                Sections\Feature\WithProductScreenshot::class,
+                Sections\Feature\OffsetWithFeatureList::class,
+                Sections\CallToAction\SimpleCentered::class,
+                Sections\CallToAction\SimpleJustified::class,
+                Sections\CallToAction\CenteredOnDarkPanel::class,
+                Sections\CallToAction\DarkPanelWithImage::class,
                 Sections\Pricing\TwoTiersWithExtraTier::class,
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
@@ -54,18 +54,18 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
 
     public function bootingPackage()
     {
-        Livewire::component('astrogoat.fictionary.sections.heroes.split-with-screenshot', Sections\Heroes\SplitWithScreenshot::class);
-        Livewire::component('astrogoat.fictionary.sections.heroes.simple-centered-with-background-image', Sections\Heroes\SimpleCenteredWithBackgroundImage::class);
-        Livewire::component('astrogoat.fictionary.sections.cloud-logos.simple-with-heading', Sections\CloudLogos\SimpleWithHeading::class);
-        Livewire::component('astrogoat.fictionary.sections.headers.centered', Sections\Headers\Centered::class);
-        Livewire::component('astrogoat.fictionary.sections.headers.with-cards', Sections\Headers\WithCards::class);
-        Livewire::component('astrogoat.fictionary.sections.f-a-qs.accordion', Sections\FAQs\Accordion::class);
-        Livewire::component('astrogoat.fictionary.sections.features.with-product-screenshot', Sections\Features\WithProductScreenshot::class);
-        Livewire::component('astrogoat.fictionary.sections.features.offset-with-feature-list', Sections\Features\OffsetWithFeatureList::class);
-        Livewire::component('astrogoat.fictionary.sections.c-t-as.simple-centered', Sections\CTAs\SimpleCentered::class);
-        Livewire::component('astrogoat.fictionary.sections.c-t-as.simple-justified', Sections\CTAs\SimpleJustified::class);
-        Livewire::component('astrogoat.fictionary.sections.c-t-as.centered-on-dark-panel', Sections\CTAs\CenteredOnDarkPanel::class);
-        Livewire::component('astrogoat.fictionary.sections.c-t-as.dark-panel-with-image', Sections\CTAs\DarkPanelWithImage::class);
+        Livewire::component('astrogoat.fictionary.sections.hero.split-with-screenshot', Sections\Hero\SplitWithScreenshot::class);
+        Livewire::component('astrogoat.fictionary.sections.hero.simple-centered-with-background-image', Sections\Hero\SimpleCenteredWithBackgroundImage::class);
+        Livewire::component('astrogoat.fictionary.sections.cloud-logo.simple-with-heading', Sections\CloudLogo\SimpleWithHeading::class);
+        Livewire::component('astrogoat.fictionary.sections.header.centered', Sections\Header\Centered::class);
+        Livewire::component('astrogoat.fictionary.sections.header.with-cards', Sections\Header\WithCards::class);
+        Livewire::component('astrogoat.fictionary.sections.frequently-asked-question.accordion', Sections\FrequentlyAskedQuestion\Accordion::class);
+        Livewire::component('astrogoat.fictionary.sections.feature.with-product-screenshot', Sections\Feature\WithProductScreenshot::class);
+        Livewire::component('astrogoat.fictionary.sections.feature.offset-with-feature-list', Sections\Feature\OffsetWithFeatureList::class);
+        Livewire::component('astrogoat.fictionary.sections.call-to-action.simple-centered', Sections\CallToAction\SimpleCentered::class);
+        Livewire::component('astrogoat.fictionary.sections.call-to-action.simple-justified', Sections\CallToAction\SimpleJustified::class);
+        Livewire::component('astrogoat.fictionary.sections.call-to-action.centered-on-dark-panel', Sections\CallToAction\CenteredOnDarkPanel::class);
+        Livewire::component('astrogoat.fictionary.sections.call-to-action.dark-panel-with-image', Sections\CallToAction\DarkPanelWithImage::class);
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-extra-tier', Sections\Pricing\TwoTiersWithExtraTier::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-emphasized-tier', Sections\Pricing\TwoTiersWithEmphasizedTier::class);

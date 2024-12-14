@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\Fictionary\Sections\FAQs;
+namespace Astrogoat\Fictionary\Sections\FrequentlyAskedQuestion;
 
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Heading;

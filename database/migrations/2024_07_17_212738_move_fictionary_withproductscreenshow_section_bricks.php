@@ -4,7 +4,7 @@ use Helix\Lego\Database\MigrateBrick;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Astrogoat\Fictionary\Sections\Features\WithProductScreenshot;
+use Astrogoat\Fictionary\Sections\Feature\WithProductScreenshot;
 
 return new class extends Migration {
     public function up(): void
