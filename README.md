@@ -7,7 +7,7 @@
 
 ---
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Fictionary is a collection of sections that can be used in your project.
 
 ## Installation
 
@@ -17,28 +17,28 @@ You can install the package via composer:
 composer require astrogoat/fictionary
 ```
 
-## Usage
+## Customization
 
-```php
-$fictionary = new Astrogoat\Fictionary();
-echo $fictionary->echoPhrase('Hello, Astrogoat!');
+You can define your own accent colors by defining CSS variables for scale of accent colors.
+
+If you're using Tailwind you’ll need to define those variables as just the color channels if you want them to work with the opacity modifier syntax. See [Tailwind documentation](https://tailwindcss.com/docs/customizing-colors#using-css-variables) for more information. 
+
+
+```css
+html body {
+    --fictionary-accent-color-50: 242 253 250;
+    --fictionary-accent-color-100: 213 250 241;
+    --fictionary-accent-color-200: 174 244 228;
+    --fictionary-accent-color-300: 134 231 212;
+    --fictionary-accent-color-400: 104 209 191;
+    --fictionary-accent-color-500: 85 181 166;
+    --fictionary-accent-color-600: 67 146 136;
+    --fictionary-accent-color-700: 53 116 110;
+    --fictionary-accent-color-800: 43 93 89;
+    --fictionary-accent-color-900: 37 77 74;
+    --fictionary-accent-color-950: 18 46 46;
+}
 ```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Releasing a new version
-
-Use the included GitHub action to create a new release.
-Go to https://github.com/astrogoat/fictionary/actions/workflows/release.yml click the "Run workflow" dropdown, select your version level bump, and click the "Run workflow" button.
-or run `gh workflow run release.yml` from your fictionary directory if you have the GitHub CLI installed locally.
-
-**Important**: Make sure that the Miles Bot user is included in the list of users who can bypass required pull request requirement
-Your repo -> Settings -> Branches -> Main (edit) -> "Allow specified actors to bypass required pull requests"
-
 
 ## Changelog
 

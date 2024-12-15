@@ -42,7 +42,7 @@ class WithCards extends Section
 
     public function renderIcon($card)
     {
-        $css = 'fic-h-7 fic-w-5 fic-flex-none fic-text-indigo-400';
+        $css = 'fic-h-7 fic-w-5 fic-flex-none fic-text-accent-400';
 
         if ($card->icon?->customIcon->hasMedia()) {
             return $card->icon->customIcon->class($css);

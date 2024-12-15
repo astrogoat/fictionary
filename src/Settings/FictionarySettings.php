@@ -4,19 +4,42 @@ namespace Astrogoat\Fictionary\Settings;
 
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
+use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 
 class FictionarySettings extends AppSettings
 {
-    // public string $url; // Example, modify to fit your need.
+    public array $colors;
+
+    protected array $peripherals = [
+        Theming::class,
+    ];
 
     public function rules(): array
     {
-        //        'url' => Rule::requiredIf($this->enabled === true), // Example, modify to fit your need.
+        return [
+            'settings.colors.accent.50' => 'nullable|string',
+            'settings.colors.accent.100' => 'nullable|string',
+            'settings.colors.accent.200' => 'nullable|string',
+            'settings.colors.accent.400' => 'nullable|string',
+            'settings.colors.accent.500' => 'nullable|string',
+            'settings.colors.accent.600' => 'nullable|string',
+            'settings.colors.accent.700' => 'nullable|string',
+            'settings.colors.accent.800' => 'nullable|string',
+            'settings.colors.accent.900' => 'nullable|string',
+            'settings.colors.accent.950' => 'nullable|string',
+        ];
     }
 
     public function description(): string
     {
-        return 'Interact with Fictionary.';
+        return 'Fictionary is a collection of sections that can be used in your project.';
+    }
+
+    public function hidden(): array
+    {
+        return [
+            'colors',
+        ];
     }
 
     public static function group(): string

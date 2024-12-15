@@ -20,7 +20,7 @@
                     <div class="fic-mt-24 sm:fic-mt-32 lg:fic-mt-16">
                         <div class="fic-inline-flex fic-space-x-6">
                             <span
-                                class="fic-rounded-full fic-bg-primary/10 fic-px-3 fic-py-1 fic-text-sm fic-font-semibold fic-leading-6 fic-text-primary fic-ring-1 fic-ring-inset fic-ring-primary/10">{{ $this->get('update')->badge }}</span>
+                                class="fic-rounded-full fic-bg-accent-600/10 fic-px-3 fic-py-1 fic-text-sm fic-font-semibold fic-leading-6 fic-text-accent-600 fic-ring-1 fic-ring-inset fic-ring-accent-600/10">{{ $this->get('update')->badge }}</span>
                             <span
                                 class="fic-inline-flex fic-items-center fic-space-x-2 fic-text-sm fic-font-medium fic-leading-6 fic-text-gray-600">
                                 <span>{{ $this->get('update.update') }}</span>
@@ -37,10 +37,10 @@
                         <form wire:submit.prevent="signUp">
                             <div class="fic-flex fic-gap-2 fic-mt-4">
                                 {!! $this->get('cta.input')
-                                    ->class('fic-block fic-w-full fic-rounded-md fic-border-0 fic-px-2 fic-py-1.5 fic-text-gray-900 fic-shadow-sm fic-ring-1 fic-ring-inset fic-ring-gray-300 placeholder:fic-text-gray-400 focus:fic-ring-2 focus:fic-ring-inset focus:fic-ring-primary sm:fic-text-sm sm:fic-leading-6')
+                                    ->class('fic-block fic-w-full fic-rounded-md fic-border-0 fic-px-2 fic-py-1.5 fic-text-gray-900 fic-shadow-sm fic-ring-1 fic-ring-inset fic-ring-gray-300 placeholder:fic-text-gray-400 focus:fic-ring-2 focus:fic-ring-inset focus:fic-ring-accent-600 sm:fic-text-sm sm:fic-leading-6')
                                     ->required()
                                 !!}
-                                {!! $this->get('cta.inputButton')->class('fic-rounded-md fic-bg-primary fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-primary/80 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-primary fic-whitespace-nowrap') !!}
+                                {!! $this->get('cta.inputButton')->class('fic-rounded-md fic-bg-accent-600 fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-accent-600/80 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-accent-600 fic-whitespace-nowrap') !!}
                             </div>
                             @if($this->signUpSuccessful === false)
                                 {{ $this->subscribedMessage }}
@@ -55,7 +55,7 @@
 
                 @if(in_array($this->get('cta.mode')->getKey(), ['buttons', 'both']))
                     <div class="fic-mt-10 fic-flex fic-items-center fic-gap-x-6">
-                        {!! $this->get('cta.primaryCta')->class('fic-rounded-md fic-bg-primary fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-indigo-500 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-primary') !!}
+                        {!! $this->get('cta.primaryCta')->class('fic-rounded-md fic-bg-accent-600 fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-accent-500 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-accent-600') !!}
                         {!! $this->get('cta.secondaryCta')->class('fic-text-sm fic-font-semibold fic-leading-6 fic-text-gray-900') !!}
                     </div>
                 @endif

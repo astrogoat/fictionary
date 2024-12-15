@@ -56,6 +56,6 @@ class TwoTiersWithEmphasizedTier extends Section
 
     public function renderIcon()
     {
-        return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-indigo-500" />', ['icon' => $this->get('callouts.icon')->key]);
+        return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-accent-500" />', ['icon' => $this->get('callouts.icon')->key]);
     }
 }

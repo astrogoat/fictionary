@@ -4,7 +4,7 @@
         <div class="fic-mx-auto fic-mt-10 fic-items-center fic-grid {{ $this->getIconDensityCss() }}">
             @foreach($this->get('logos') as $logoGroup)
                 <div class="fic-flex {{ $this->get('textPosition')->getKey() === 'below' ? 'fic-flex-col' : 'fic-flex-col-reverse' }}">
-                    {!! $logoGroup->media->class('fic-text-primary fic-col-span-2 fic-w-full fic-object-contain lg:fic-col-span-1 ' . $this->getMaxIconHeightCss()) !!}
+                    {!! $logoGroup->media->class('fic-text-accent-600 fic-col-span-2 fic-w-full fic-object-contain lg:fic-col-span-1 ' . $this->getMaxIconHeightCss()) !!}
                     <div class="fic-flex fic-flex-col fic-items-center {{ $this->get('textPosition')->getKey() === 'below' ? 'fic-mt-6' : 'fic-mb-6' }}">
                         @if($logoGroup->title->hasContent())
                             {!! $logoGroup->title->class('fic-font-bold fic-text-lg') !!}

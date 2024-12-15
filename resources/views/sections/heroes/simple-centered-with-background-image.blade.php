@@ -32,7 +32,7 @@
                         {!! $this->get('subheading.content') !!}
                     </p>
                     <div class="fic-mt-10 fic-flex fic-items-center fic-justify-center fic-gap-x-6">
-                        {!! $this->get('ctas.primary')->class('fic-rounded-md fic-bg-indigo-500 fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-indigo-400 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-indigo-400') !!}
+                        {!! $this->get('ctas.primary')->class('fic-rounded-md fic-bg-accent-500 fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-accent-400 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-accent-400') !!}
                         {!! $this->get('ctas.secondary')->class('fic-text-sm/6 fic-font-semibold fic-text-white') !!}
                     </div>
                 </div>

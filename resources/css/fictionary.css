@@ -1,6 +1,2 @@
 @tailwind components;
 @tailwind utilities;
-
-html {
-    --fictionary-primary-color: 79 70 229;
-}
