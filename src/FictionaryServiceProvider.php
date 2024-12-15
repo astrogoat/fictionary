@@ -37,6 +37,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Pricing\TwoTiersWithExtraTier::class,
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
+                Sections\Team\WithVerticalImages::class,
 
             ])
             ->publishOnInstall(['public'])
@@ -71,6 +72,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-extra-tier', Sections\Pricing\TwoTiersWithExtraTier::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-emphasized-tier', Sections\Pricing\TwoTiersWithEmphasizedTier::class);
         Livewire::component('astrogoat.fictionary.sections.marketing.pricing.single-price-with-details', Sections\Marketing\Pricing\SinglePriceWithDetails::class);
+        Livewire::component('astrogoat.fictionary.sections.team.with-vertical-images', Sections\Team\WithVerticalImages::class);
 
         Livewire::component('astrogoat.fictionary.settings.peripherals.theming', Theming::class);
     }
