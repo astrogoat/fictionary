@@ -28,6 +28,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\CloudLogo\SimpleWithHeading::class,
                 Sections\Header\Centered::class,
                 Sections\Header\WithCards::class,
+                Sections\Feature\SimpleThreeColumnWithLargeIcons::class,
                 Sections\Feature\WithProductScreenshot::class,
                 Sections\Feature\OffsetWithFeatureList::class,
                 Sections\CallToAction\SimpleCentered::class,
@@ -64,6 +65,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.frequently-asked-question.accordion', Sections\FrequentlyAskedQuestion\Accordion::class);
         Livewire::component('astrogoat.fictionary.sections.feature.with-product-screenshot', Sections\Feature\WithProductScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.feature.offset-with-feature-list', Sections\Feature\OffsetWithFeatureList::class);
+        Livewire::component('astrogoat.fictionary.sections.feature.simple-three-column-with-large-icons', Sections\Feature\SimpleThreeColumnWithLargeIcons::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.simple-centered', Sections\CallToAction\SimpleCentered::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.simple-justified', Sections\CallToAction\SimpleJustified::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.centered-on-dark-panel', Sections\CallToAction\CenteredOnDarkPanel::class);

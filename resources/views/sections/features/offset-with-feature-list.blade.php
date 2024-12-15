@@ -10,11 +10,7 @@
                 @foreach($this->get('callouts.items') as $callout)
                     <div class="fic-relative fic-pl-9">
                         <dt class="fic-font-semibold fic-text-gray-900">
-{{--                            <x-fab::elements.icon icon="bell" />--}}
                             {!! $this->getCalloutIcon($callout) !!}
-{{--                            <svg class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-accent-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">--}}
-{{--                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />--}}
-{{--                            </svg>--}}
                             {{ $callout->title }}
                         </dt>
                         {!! $callout->description->class('fic-mt-2') !!}
