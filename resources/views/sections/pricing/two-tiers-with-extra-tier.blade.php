@@ -7,11 +7,11 @@
             </div>
             <div class="fic-relative fic-mt-6">
                 {!! $this->get('description.copy')->class('fic-mx-auto fic-max-w-2xl fic-text-pretty fic-text-lg fic-font-medium fic-text-gray-400 sm:fic-text-xl/8') !!}
-                <svg viewBox="0 0 1208 1024" class="fic-absolute fic--top-10 fic-left-1/2 fic--z-10 h-[64rem] fic--translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:fic--top-12 md:fic--top-20 lg:fic--top-12 xl:fic-top-0">
+                <svg viewBox="0 0 1208 1024" class="fic-absolute fic--top-10 fic-left-1/2 fic--z-10 fic-h-[64rem] fic--translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:fic--top-12 md:fic--top-20 lg:fic--top-12 xl:fic-top-0">
                     <ellipse cx="604" cy="512" fill="url(#6d1bd035-0dd1-437e-93fa-59d316231eb0)" rx="604" ry="512" />
                     <defs>
                         <radialGradient id="6d1bd035-0dd1-437e-93fa-59d316231eb0">
-                            <stop stop-color="#7775D6" />
+                            <stop stop-color="#beede2" />
                             <stop offset="1" stop-color="#E935C1" />
                         </radialGradient>
                     </defs>
