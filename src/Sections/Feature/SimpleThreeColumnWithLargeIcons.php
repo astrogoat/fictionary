@@ -2,19 +2,14 @@
 
 namespace Astrogoat\Fictionary\Sections\Feature;
 
-use Str;
-use ReflectionClass;
-use Helix\Fabrick\Icon;
-use Helix\Lego\Bricks\Link;
-use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Media;
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Editor;
+use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Repeater;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 use Illuminate\Support\Facades\Blade;
-use Astrogoat\Fictionary\Traits\CommonSection;
 
 class SimpleThreeColumnWithLargeIcons extends Section
 {
@@ -38,7 +33,7 @@ class SimpleThreeColumnWithLargeIcons extends Section
                         ...$this->iconsWithCustomIconBrick(),
                         'link' => Link::name('Link'),
                     ]),
-            ])
+            ]),
         ];
     }
 

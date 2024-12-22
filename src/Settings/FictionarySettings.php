@@ -2,9 +2,8 @@
 
 namespace Astrogoat\Fictionary\Settings;
 
-use Helix\Lego\Settings\AppSettings;
-use Illuminate\Validation\Rule;
 use Astrogoat\Fictionary\Settings\Peripherals\Theming;
+use Helix\Lego\Settings\AppSettings;
 
 class FictionarySettings extends AppSettings
 {

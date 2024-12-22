@@ -2,19 +2,18 @@
 
 namespace Astrogoat\Fictionary\Traits;
 
-use Str;
-use ReflectionClass;
 use Helix\Fabrick\Icon;
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Link;
+use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Heading;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Number;
 use Helix\Lego\Bricks\Select;
-use Helix\Lego\Bricks\Heading;
-use Helix\Lego\Bricks\Checkbox;
-use Illuminate\Support\Facades\Blade;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Media\Transformations\Transformation;
+use ReflectionClass;
+use Str;
 
 trait CommonSection
 {

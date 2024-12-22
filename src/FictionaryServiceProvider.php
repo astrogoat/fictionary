@@ -3,11 +3,11 @@
 namespace Astrogoat\Fictionary;
 
 use Astrogoat\Fictionary\Settings\FictionarySettings;
+use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
-use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 
 class FictionaryServiceProvider extends AppPackageServiceProvider
 {

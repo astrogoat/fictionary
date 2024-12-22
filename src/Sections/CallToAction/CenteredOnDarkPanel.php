@@ -2,11 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\CallToAction;
 
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
-use Astrogoat\Fictionary\Traits\CommonSection;
 
 class CenteredOnDarkPanel extends Section
 {
@@ -26,7 +25,7 @@ class CenteredOnDarkPanel extends Section
                 ->bricks([
                     'copy' => Text::name('Description')->multipleLines()->renderAsElement('p'),
                 ]),
-            ...$this->ctasBrick()
+            ...$this->ctasBrick(),
         ];
     }
 }

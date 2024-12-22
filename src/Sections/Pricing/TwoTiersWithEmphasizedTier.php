@@ -2,13 +2,13 @@
 
 namespace Astrogoat\Fictionary\Sections\Pricing;
 
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Link;
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 use Illuminate\Support\Facades\Blade;
-use Astrogoat\Fictionary\Traits\CommonSection;
 
 class TwoTiersWithEmphasizedTier extends Section
 {

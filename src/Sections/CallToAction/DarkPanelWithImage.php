@@ -2,12 +2,11 @@
 
 namespace Astrogoat\Fictionary\Sections\CallToAction;
 
-use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Link;
-use Helix\Lego\Bricks\Text;
-use Helix\Lego\Bricks\Media;
-use Helix\Lego\Http\Livewire\Section;
 use Astrogoat\Fictionary\Traits\CommonSection;
+use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Media;
+use Helix\Lego\Bricks\Text;
+use Helix\Lego\Http\Livewire\Section;
 
 class DarkPanelWithImage extends Section
 {
@@ -30,7 +29,7 @@ class DarkPanelWithImage extends Section
             'image' => Group::name('Image')->bricks([
                 'media' => Media::name('Image')->maxFiles(1),
             ]),
-            ...$this->ctasBrick()
+            ...$this->ctasBrick(),
         ];
     }
 }

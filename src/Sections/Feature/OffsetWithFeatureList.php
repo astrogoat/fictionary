@@ -2,17 +2,12 @@
 
 namespace Astrogoat\Fictionary\Sections\Feature;
 
-use Str;
-use ReflectionClass;
-use Helix\Fabrick\Icon;
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
-use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 use Illuminate\Support\Facades\Blade;
-use Astrogoat\Fictionary\Traits\CommonSection;
 
 class OffsetWithFeatureList extends Section
 {
@@ -36,7 +31,7 @@ class OffsetWithFeatureList extends Section
                         ...$this->iconsWithCustomIconBrick(),
                     ]),
 
-            ])
+            ]),
         ];
     }
 
