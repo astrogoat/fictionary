@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Fictionary\Sections\CallToAction;
 
-use Helix\Lego\Bricks\Link;
 use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
+use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
