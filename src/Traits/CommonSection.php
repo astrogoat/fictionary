@@ -17,10 +17,10 @@ use Str;
 
 trait CommonSection
 {
-    public function backgroundImageWithTransformationsBrick()
+    public function backgroundImageWithTransformationsBrick(string $groupName = 'Background image')
     {
         return [
-            'background' => Group::name('Background image')->bricks([
+            'background' => Group::name($groupName)->bricks([
                 'image' => Media::name('Image')->maxFiles(1),
                 'should-apply-transformation' => Checkbox::name('Apply image transformation'),
                 'transformations' => Group::name('Transformations')
