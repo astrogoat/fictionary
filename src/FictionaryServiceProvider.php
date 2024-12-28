@@ -21,6 +21,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 __DIR__ . '/../database/migrations/settings',
             ])
             ->sections([
+                Sections\Blog\ThreeColumnWithImages::class,
                 Sections\FrequentlyAskedQuestion\Accordion::class,
                 Sections\Stats\Simple::class,
                 Sections\Hero\SplitWithScreenshot::class,
@@ -39,7 +40,6 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
                 Sections\Team\WithVerticalImages::class,
-
             ])
             ->publishOnInstall(['public'])
             ->backendRoutes(__DIR__.'/../routes/backend.php')
@@ -57,6 +57,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
 
     public function bootingPackage()
     {
+        Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-images', Sections\Blog\ThreeColumnWithImages::class);
         Livewire::component('astrogoat.fictionary.sections.hero.split-with-screenshot', Sections\Hero\SplitWithScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.hero.simple-centered-with-background-image', Sections\Hero\SimpleCenteredWithBackgroundImage::class);
         Livewire::component('astrogoat.fictionary.sections.cloud-logo.simple-with-heading', Sections\CloudLogo\SimpleWithHeading::class);
