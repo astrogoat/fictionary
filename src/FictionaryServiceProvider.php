@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Fictionary;
 
+use Illuminate\Support\Facades\Blade;
 use Astrogoat\Fictionary\Settings\FictionarySettings;
 use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 use Helix\Lego\Apps\App;
@@ -41,6 +42,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
                 Sections\Team\WithVerticalImages::class,
+                Sections\Testimonial\Grid::class,
             ])
             ->publishOnInstall(['public'])
             ->backendRoutes(__DIR__.'/../routes/backend.php')
@@ -58,6 +60,8 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
 
     public function bootingPackage()
     {
+        Blade::componentNamespace('Astrogoat\\Fictionary\\Views\\Components', 'fic');
+
         Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-images', Sections\Blog\ThreeColumnWithImages::class);
         Livewire::component('astrogoat.fictionary.sections.hero.split-with-screenshot', Sections\Hero\SplitWithScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.hero.simple-centered-with-background-image', Sections\Hero\SimpleCenteredWithBackgroundImage::class);
@@ -78,6 +82,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-emphasized-tier', Sections\Pricing\TwoTiersWithEmphasizedTier::class);
         Livewire::component('astrogoat.fictionary.sections.marketing.pricing.single-price-with-details', Sections\Marketing\Pricing\SinglePriceWithDetails::class);
         Livewire::component('astrogoat.fictionary.sections.team.with-vertical-images', Sections\Team\WithVerticalImages::class);
+        Livewire::component('astrogoat.fictionary.sections.testimonial.grid', Sections\Testimonial\Grid::class);
 
         Livewire::component('astrogoat.fictionary.settings.peripherals.theming', Theming::class);
     }
