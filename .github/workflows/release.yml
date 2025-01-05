@@ -42,10 +42,10 @@ jobs:
 
       - name: Build assets status
         id: build_assets_status
-        run: echo "updated=$(git status -s)" >> $GITHUB_OUTPUT
+        run: echo "updated=$(git status -s | tr -d '\n' | wc -m)" >> $GITHUB_OUTPUT
 
       - name: Commit Build Assets
-        if: steps.build_assets_status.outputs.updated != ''
+        if: steps.build_assets_status.outputs.updated != '0'
         run: |
           git add -A public
           git commit -m "Build assets"
