@@ -9,7 +9,6 @@ use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
-use Illuminate\Support\Facades\Blade;
 
 class ThreeColumnWithImages extends Section
 {
@@ -31,30 +30,6 @@ class ThreeColumnWithImages extends Section
                 'image' => Media::name('Image')->maxFiles(1),
                 'link' => Link::name('Link'),
             ]),
-//            'eyebrow' => Text::name('Eyebrow')->renderAsElement('h2'),
-//            'callouts' => Group::name('Callouts')->bricks([
-//                ...$this->iconsBrick(),
-//                'items' => Repeater::name('Callouts')
-//                    ->bricks([
-//                        'title' => Text::name('Title')->renderAsElement(false),
-//                        'description' => Text::name('Description')->renderAsElement('dd'),
-//                        ...$this->iconsWithCustomIconBrick(),
-//                    ]),
-//
-//            ]),
         ];
-    }
-
-    public function getCalloutIcon($callout)
-    {
-        if ($callout->icon?->customIcon->hasMedia()) {
-            return $callout->icon->customIcon->class('fic-absolute fic-left-0 fic-top-1 fic-w-6 fic-text-accent-500');
-        }
-
-        if ($callout->icon?->element->key) {
-            return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-accent-500" />', ['icon' => $callout->icon->element->key]);
-        }
-
-        return Blade::render('<x-fab::elements.icon :icon="$icon" class="fic-absolute fic-left-0 fic-top-1 fic-size-5 fic-text-accent-500" />', ['icon' => $this->get('callouts.icon')->key]);
     }
 }

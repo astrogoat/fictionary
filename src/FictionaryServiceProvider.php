@@ -23,6 +23,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
             ])
             ->sections([
                 Sections\Blog\ThreeColumnWithImages::class,
+                Sections\Blog\ThreeColumnWithBackgroundImages::class,
                 Sections\FrequentlyAskedQuestion\Accordion::class,
                 Sections\Stats\Simple::class,
                 Sections\Hero\SplitWithScreenshot::class,
@@ -63,6 +64,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Blade::componentNamespace('Astrogoat\\Fictionary\\Views\\Components', 'fic');
 
         Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-images', Sections\Blog\ThreeColumnWithImages::class);
+        Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-background-images', Sections\Blog\ThreeColumnWithBackgroundImages::class);
         Livewire::component('astrogoat.fictionary.sections.hero.split-with-screenshot', Sections\Hero\SplitWithScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.hero.simple-centered-with-background-image', Sections\Hero\SimpleCenteredWithBackgroundImage::class);
         Livewire::component('astrogoat.fictionary.sections.cloud-logo.simple-with-heading', Sections\CloudLogo\SimpleWithHeading::class);
