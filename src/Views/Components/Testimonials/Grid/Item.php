@@ -2,8 +2,8 @@
 
 namespace Astrogoat\Fictionary\Views\Components\Testimonials\Grid;
 
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
 
 class Item extends Component
 {
@@ -13,8 +13,7 @@ class Item extends Component
         public ?string $imageSrc = null,
         public ?string $additionalNameInformation = null,
         public string $size = 'small',
-    )
-    {
+    ) {
     }
 
     public function render(): View

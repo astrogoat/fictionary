@@ -2,14 +2,12 @@
 
 namespace Astrogoat\Fictionary\Sections\Blog;
 
-use Helix\Lego\Bricks\Number;
-use Helix\Lego\Bricks\Select;
-use Helix\Lego\Bricks\DatePicker;
 use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
 
@@ -47,8 +45,8 @@ class ThreeColumnWithBackgroundImages extends Section
                         'lg:fic-col-span-1' => '1',
                         'lg:fic-col-span-2' => '2',
                         'lg:fic-col-span-3' => '3',
-                    ])
-                ])
+                    ]),
+                ]),
             ]),
         ];
     }

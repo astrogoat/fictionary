@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Fictionary;
 
-use Illuminate\Support\Facades\Blade;
 use Astrogoat\Fictionary\Settings\FictionarySettings;
 use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
+use Illuminate\Support\Facades\Blade;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 
