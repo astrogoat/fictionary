@@ -8,7 +8,7 @@
             @foreach($this->get('articles') as $article)
                 <article class="fic-relative fic-isolate fic-flex fic-flex-col fic-justify-end fic-overflow-hidden fic-rounded-2xl fic-bg-gray-900 fic-px-8 fic-pb-8 fic-pt-80 sm:fic-pt-48 lg:fic-pt-80 {{ $article->layout->colSpan->key }}">
                     {!! $article->image->image->class('fic-absolute fic-inset-0 fic--z-10 fic-size-full fic-object-cover') !!}
-                    <div class="fic-absolute fic-inset-0 fic--z-10 fic-bg-gradient-to-t fic-from-gray-900 fic-via-gray-900/40"></div>
+                    <div class="fic-absolute fic-inset-0 fic--z-10 fic-bg-gradient-to-t fic-from-gray-900 fic-via-gray-900/50"></div>
                     <div class="fic-absolute fic-inset-0 fic--z-10 fic-rounded-2xl fic-ring-1 fic-ring-inset fic-ring-gray-900/10"></div>
 
                     <div class="fic-flex fic-flex-wrap fic-items-center fic-gap-y-1 fic-overflow-hidden fic-text-sm/6 fic-text-gray-300">
