@@ -39,7 +39,16 @@ jobs:
         run: |
           npm install
           npm run prod
+
+      - name: Build assets status
+        id: build_assets_status
+        run: echo "updated=$(git status -s)" >> $GITHUB_OUTPUT
+
+      - name: Commit Build Assets
+        if: steps.build_assets_status.outputs.updated != ''
+        run: |
           git add -A public
+          git commit -m "Build assets"
 
       # Make sure that the Miles Bot user is included in the list of users who can bypass required pull request requirement
       # Your repo -> Settings -> Branches -> Main (edit) -> "Allow specified actors to bypass required pull requests"
