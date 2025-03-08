@@ -6,7 +6,7 @@
         </div>
         <div class="fic-mx-auto {{ $this->get('heading.heading')->hasContent() || $this->get('heading.description')->hasContent() ? 'fic-mt-16' : '' }} fic-grid fic-max-w-2xl fic-grid-cols-1 fic-gap-x-8 fic-gap-y-20 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-3">
             @foreach($this->get('articles') as $article)
-                <article class="fic-flex fic-flex-col fic-items-start fic-justify-between">
+                <article class="fic-flex fic-flex-col fic-items-start fic-justify-start">
                     <x-lego::bricks.link :link="$article->link">
                         <div class="fic-relative fic-w-full">
                             {!! $article->image->class('fic-aspect-video fic-w-full fic-rounded-2xl fic-bg-gray-100 fic-object-cover sm:fic-aspect-[2/1] lg:fic-aspect-[3/2]') !!}
