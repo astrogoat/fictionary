@@ -18,14 +18,14 @@
     {{--                        <time datetime="2020-03-16" class="fic-text-gray-500">Mar 16, 2020</time>--}}
     {{--                        <a href="#" class="fic-relative fic-z-10 fic-rounded-full fic-bg-gray-50 fic-px-3 fic-py-1.5 fic-font-medium fic-text-gray-600 hover:fic-bg-gray-100">Marketing</a>--}}
     {{--                    </div>--}}
-                        <div class="fic-group fic-relative">
+                        <div class="fic-mt-6 fic-group fic-relative">
                             <h3 class="fic-mt-3 fic-text-lg/6 fic-font-semibold fic-text-gray-900 group-hover:fic-text-gray-600">
                                 <x-lego::bricks.link :link="$article->link">
                                     <span class="fic-absolute fic-inset-0"></span>
                                     {{ $article->title }}
                                 </x-lego::bricks.link>
                             </h3>
-                            {!! $article->description->class('fic-mt-5 fic-line-clamp-3 fic-text-sm/6 fic-text-gray-600') !!}
+                            {!! $article->description->class('fic-mt-1 fic-text-base/6 fic-text-gray-600') !!}
                         </div>
     {{--                    <div class="fic-relative fic-mt-8 fic-flex fic-items-center fic-gap-x-4">--}}
     {{--                        <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="fic-size-10 fic-rounded-full fic-bg-gray-100">--}}

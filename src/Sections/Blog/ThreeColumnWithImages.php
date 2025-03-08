@@ -26,7 +26,7 @@ class ThreeColumnWithImages extends Section
             ]),
             'articles' => Repeater::name('Articles')->bricks([
                 'title' => Text::name('Title')->renderAsElement(false),
-                'description' => Text::name('Description')->renderAsElement(false)->multipleLines(),
+                'description' => Text::name('Description')->renderAsElement('p')->multipleLines(),
                 'image' => Media::name('Image')->maxFiles(1),
                 'link' => Link::name('Link'),
             ]),
