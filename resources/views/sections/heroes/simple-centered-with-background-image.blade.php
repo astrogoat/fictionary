@@ -8,17 +8,17 @@
             <div class="fic-mx-auto fic-py-32 sm:fic-py-48 lg:fic-py-56">
                 @if($this->get('pill.should-display')->isChecked())
                     <div class="fic-hidden sm:fic-mb-8 sm:fic-flex sm:fic-justify-center">
-                        <div class="fic-relative fic-rounded-full fic-px-3 fic-py-1 fic-text-sm/6 fic-text-gray-400 fic-ring-1 fic-ring-white/10 hover:fic-ring-white/20">
+                        <div class="fic-relative fic-rounded-full fic-px-3 fic-py-1 fic-text-sm/6 {{ $this->get('pill.color')->key }} fic-ring-1 fic-ring-white/10 hover:fic-ring-white/20">
                             {{ $this->get('pill.content') }}
                             @if($this->get('pill.link')->getContent())
                                 <a
                                     href="{{ $this->get('pill.link')->getHref() }}"
-                                    class="fic-font-semibold fic-text-white"
+                                    class="fic-font-semibold {{ $this->get('pill.color')->key }}"
                                     target="{{ $this->get('pill.link')->getTarget() }}"
                                     aria-label="{{ $this->get('pill.link')->getA11yTitle() }}"
                                 >
                                     <span class="fic-absolute fic-inset-0" aria-hidden="true"></span>
-                                    {{ $this->get('pill.link')->getContent() }} <span aria-hidden="true">&rarr;</span>
+                                    {!! $this->get('pill.link')->getContent() !!} <span aria-hidden="true">&rarr;</span>
                                 </a>
                             @endif
                         </div>

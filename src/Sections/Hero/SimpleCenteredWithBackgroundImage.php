@@ -25,6 +25,10 @@ class SimpleCenteredWithBackgroundImage extends Section
                 'content' => Text::name('Content')->renderAsElement(false),
                 'link' => Link::name('Link'),
                 'should-display' => Checkbox::name('Should display')->default(false),
+                'color' => Select::name('Color')->options([
+                    'fic-text-white' => 'White',
+                    'fic-text-black' => 'Black',
+                ])->default('text-white'),
             ]),
             'heading' => Group::name('Heading')->bricks([
                 'content' => Text::name('Content')->renderAsElement(false)->multipleLines(),
