@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Fictionary\Sections\Blog;
 
+use Helix\Lego\Bricks\Toggle;
 use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Link;
@@ -29,6 +30,7 @@ class ThreeColumnWithImages extends Section
                 'description' => Text::name('Description')->renderAsElement('p')->multipleLines(),
                 'image' => Media::name('Image')->maxFiles(1),
                 'link' => Link::name('Link'),
+                'showCta' => Toggle::name('Show CTA')->default(false),
             ]),
         ];
     }
