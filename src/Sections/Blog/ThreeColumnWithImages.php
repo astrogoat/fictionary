@@ -2,10 +2,7 @@
 
 namespace Astrogoat\Fictionary\Sections\Blog;
 
-use stdClass;
-use Helix\Lego\Bricks\Checkbox;
 use Astrogoat\Blog\Bricks\Article;
-use Astrogoat\Blog\Models\Article as BlogArticle;
 use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Link;
@@ -13,10 +10,10 @@ use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Toggle;
-use Helix\Lego\Http\Livewire\Section;
 use Helix\Lego\Bricks\ValueObjects\LinkValueObject;
 use Helix\Lego\Bricks\ValueObjects\TextValueObject;
-use Helix\Lego\Bricks\ValueObjects\CheckboxValueObject;
+use Helix\Lego\Http\Livewire\Section;
+use stdClass;
 
 class ThreeColumnWithImages extends Section
 {

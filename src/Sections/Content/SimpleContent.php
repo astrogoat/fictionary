@@ -2,10 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\Content;
 
+use Astrogoat\Fictionary\Traits\CommonSection;
+use Helix\Lego\Bricks\Editor;
 use Helix\Lego\Bricks\Toggle;
 use Helix\Lego\Enums\Editor as EditorFlavor;
-use Helix\Lego\Bricks\Editor;
-use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Http\Livewire\Section;
 
 class SimpleContent extends Section
