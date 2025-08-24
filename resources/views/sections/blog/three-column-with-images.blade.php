@@ -5,7 +5,8 @@
             {!! $this->get('heading.description')->class('fic-mt-2 fic-text-lg/8 fic-text-gray-600') !!}
         </div>
         <div class="fic-mx-auto {{ $this->get('heading.heading')->hasContent() || $this->get('heading.description')->hasContent() ? 'fic-mt-16' : '' }} fic-grid fic-max-w-2xl fic-grid-cols-1 fic-gap-x-8 fic-gap-y-20 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-3">
-            @foreach($this->get('articles') as $article)
+            @foreach($this->get('articles') as $articleBricks)
+                @php($article = $this->getArticle($articleBricks))
                 <article class="fic-flex fic-flex-col fic-items-start fic-justify-start">
                     <x-lego::bricks.link :link="$article->link" :allow-customization="false">
                         <div class="fic-relative fic-w-full">

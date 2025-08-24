@@ -2,6 +2,10 @@
 
 namespace Astrogoat\Fictionary\Sections\Blog;
 
+use stdClass;
+use Helix\Lego\Bricks\Checkbox;
+use Astrogoat\Blog\Bricks\Article;
+use Astrogoat\Blog\Models\Article as BlogArticle;
 use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Link;
@@ -10,6 +14,9 @@ use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Toggle;
 use Helix\Lego\Http\Livewire\Section;
+use Helix\Lego\Bricks\ValueObjects\LinkValueObject;
+use Helix\Lego\Bricks\ValueObjects\TextValueObject;
+use Helix\Lego\Bricks\ValueObjects\CheckboxValueObject;
 
 class ThreeColumnWithImages extends Section
 {
@@ -26,12 +33,60 @@ class ThreeColumnWithImages extends Section
                 'description' => Text::name('Description')->renderAsElement('p'),
             ]),
             'articles' => Repeater::name('Articles')->bricks([
-                'title' => Text::name('Title')->renderAsElement(false),
-                'description' => Text::name('Description')->renderAsElement('p')->multipleLines(),
-                'image' => Media::name('Image')->maxFiles(1),
-                'link' => Link::name('Link'),
+                'useExistingBlogArticle' => Toggle::name('Use existing blog article'),
+                'blogArticleId' => Article::name('Article')
+                    ->when(function ($brickName, $groupBrickName, $repeaterIndex) {
+                        return $this->getBrickCurrentValue("articles.{$repeaterIndex}.useExistingBlogArticle") === true;
+                    }),
+                'title' => Text::name('Title')->renderAsElement(false)
+                    ->when(function ($brickName, $groupBrickName, $repeaterIndex) {
+                        return $this->getBrickCurrentValue("articles.{$repeaterIndex}.useExistingBlogArticle") === false;
+                    }),
+                'description' => Text::name('Description')->renderAsElement('p')->multipleLines()
+                    ->when(function ($brickName, $groupBrickName, $repeaterIndex) {
+                        return $this->getBrickCurrentValue("articles.{$repeaterIndex}.useExistingBlogArticle") === false;
+                    }),
+                'image' => Media::name('Image')->maxFiles(1)
+                    ->when(function ($brickName, $groupBrickName, $repeaterIndex) {
+                        return $this->getBrickCurrentValue("articles.{$repeaterIndex}.useExistingBlogArticle") === false;
+                    }),
+                'link' => Link::name('Link')
+                    ->when(function ($brickName, $groupBrickName, $repeaterIndex) {
+                        return $this->getBrickCurrentValue("articles.{$repeaterIndex}.useExistingBlogArticle") === false;
+                    }),
                 'showCta' => Toggle::name('Show CTA')->default(false),
             ]),
         ];
+    }
+
+    public function getArticle($bricks): stdClass
+    {
+        $article = new StdClass();
+
+        if ($bricks->useExistingBlogArticle->isChecked() && $articleModel = $bricks->blogArticleId->getArticleModel()) {
+            $article->link = new LinkValueObject([
+                'href' => $articleModel->getPublishedRoute(),
+                'id' => $articleModel->id,
+                'target' => $articleModel->_self,
+                'text' => 'Read article',
+            ], $bricks->link->getBrickKey(), $this);
+            $article->image = $articleModel->getFirstMedia('Featured');
+            $article->title = $articleModel->title;
+            $article->description = new TextValueObject($articleModel->description ?? '', [
+                'asBulletPoints' => false,
+                'newLineToHtmlBreak' => false,
+            ], $this);
+            $article->showCta = $bricks->showCta;
+
+            return $article;
+        }
+
+        $article->link = $bricks->link;
+        $article->image = $bricks->image;
+        $article->title = $bricks->title;
+        $article->description = $bricks->description;
+        $article->showCta = $bricks->showCta;
+
+        return $article;
     }
 }
