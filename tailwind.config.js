@@ -2,7 +2,7 @@
 
 module.exports = {
     prefix: 'fic-',
-    darkMode: false, // or 'media' or 'class',
+    darkMode: 'selector', // or 'media' or 'class',
     content: [
         './src/Sections/**/*.php',
         './resources/**/*.blade.php',
