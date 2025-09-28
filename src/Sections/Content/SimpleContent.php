@@ -2,10 +2,9 @@
 
 namespace Astrogoat\Fictionary\Sections\Content;
 
-use Astrogoat\Fictionary\Traits\CommonSection;
-use Helix\Lego\Bricks\Editor;
 use Helix\Lego\Bricks\Toggle;
-use Helix\Lego\Enums\Editor as EditorFlavor;
+use Helix\Lego\Bricks\Editor;
+use Astrogoat\Fictionary\Traits\CommonSection;
 use Helix\Lego\Http\Livewire\Section;
 
 class SimpleContent extends Section
@@ -18,7 +17,7 @@ class SimpleContent extends Section
     public function bricks(): array
     {
         return [
-            'content' => Editor::name('Content')->flavor(EditorFlavor::TIPTAP),
+            'content' => Editor::name('Content'),
             'useProse' => Toggle::name('Optimize readability')
                 ->help('This will format the content for better readability.')
                 ->default(true),
