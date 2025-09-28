@@ -40,6 +40,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Hero\SimpleCenteredWithBackgroundImage::class,
                 Sections\Hero\SplitWithScreenshot::class,
                 Sections\Marketing\Pricing\SinglePriceWithDetails::class,
+                Sections\Pricing\ThreeTiers::class,
                 Sections\Pricing\TwoTiersWithEmphasizedTier::class,
                 Sections\Pricing\TwoTiersWithExtraTier::class,
                 Sections\Stats\Simple::class,
@@ -82,6 +83,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.hero.simple-centered-with-background-image', Sections\Hero\SimpleCenteredWithBackgroundImage::class);
         Livewire::component('astrogoat.fictionary.sections.hero.split-with-screenshot', Sections\Hero\SplitWithScreenshot::class);
         Livewire::component('astrogoat.fictionary.sections.marketing.pricing.single-price-with-details', Sections\Marketing\Pricing\SinglePriceWithDetails::class);
+        Livewire::component('astrogoat.fictionary.sections.pricing.three-tiers', Sections\Pricing\ThreeTiers::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-emphasized-tier', Sections\Pricing\TwoTiersWithEmphasizedTier::class);
         Livewire::component('astrogoat.fictionary.sections.pricing.two-tiers-with-extra-tier', Sections\Pricing\TwoTiersWithExtraTier::class);
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
