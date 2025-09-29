@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-relative fic-bg-gray-900">
         <div class="fic-relative fic-h-80 fic-overflow-hidden fic-bg-accent-600 md:fic-absolute md:fic-left-0 md:fic-h-full md:fic-w-1/3 lg:fic-w-1/2">
             {!! $this->getBackgroundImageWithTransformations()->class('fic-size-full fic-object-cover') !!}

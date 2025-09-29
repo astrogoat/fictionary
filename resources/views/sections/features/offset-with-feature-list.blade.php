@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
         <div class="fic-mx-auto fic-grid fic-max-w-2xl fic-grid-cols-1 fic-gap-x-8 fic-gap-y-16 sm:fic-gap-y-20 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-5">
             <div class="fic-col-span-2">

@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-relative fic-isolate fic-overflow-hidden fic-py-24 sm:fic-py-32">
         {!! $this->getBackgroundImageWithTransformations() !!}
 {{--        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="fic-absolute fic-inset-0 fic--z-10 fic-size-full fic-object-cover fic-object-right md:fic-object-center">--}}

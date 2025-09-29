@@ -1,8 +1,9 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-relative fic-isolate fic-overflow-hidden">
         <svg
             class="fic-absolute fic-inset-0 fic--z-10 fic-h-full fic-w-full fic-stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-            aria-hidden="true">
+            aria-hidden="true"
+        >
             <defs>
                 <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
                          patternUnits="userSpaceOnUse">
@@ -17,7 +18,7 @@
                 {!! $this->get('logo.media')->first()->removeWidth()->removeHeight()->class($this->get('logo.height')->key) !!}
 
                 @if($this->get('update')->show->isChecked())
-                    <div class="fic-mt-24 sm:fic-mt-32 lg:fic-mt-16">
+                    <div class="">
                         <div class="fic-inline-flex fic-space-x-6">
                             <span
                                 class="fic-rounded-full fic-bg-accent-600/10 fic-px-3 fic-py-1 fic-text-sm fic-font-semibold fic-leading-6 fic-text-accent-600 fic-ring-1 fic-ring-inset fic-ring-accent-600/10">{{ $this->get('update')->badge }}</span>

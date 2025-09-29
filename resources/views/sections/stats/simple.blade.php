@@ -1,5 +1,5 @@
-<x-lego::section :section="$this">
-    <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
+<x-lego::section>
+    <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8 fic-flex fic-justify-center">
         <dl class="fic-grid fic-gap-y-16 fic-text-center {{ $this->getGridDensityCss() }}">
             @foreach($this->get('stats') as $stat)
                 <div class="fic-mx-auto fic-flex fic-max-w-xs fic-flex-col fic-gap-y-4">

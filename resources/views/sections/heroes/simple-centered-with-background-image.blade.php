@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-relative fic-isolate fic-overflow-hidden fic-pt-14">
         {!! $this->getBackgroundImageWithTransformations() !!}
         <div class="fic-absolute fic-inset-x-0 fic--top-40 fic--z-10 fic-transform-gpu fic-overflow-hidden fic-blur-3xl sm:fic--top-80" aria-hidden="true">

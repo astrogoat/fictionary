@@ -1,6 +1,6 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
-        {!! $this->get('heading')->class('font-headline fic-text-center fic-text-2xl fic-font-semibold fic-leading-8 fic-text-gray-900') !!}
+        {!! $this->get('heading')->class('font-headline fic-text-center fic-text-2xl sm:fic-text-4xl fic-font-semibold fic-leading-8 fic-text-gray-900') !!}
         <div class="fic-mx-auto fic-mt-10 fic-items-center fic-grid {{ $this->getIconDensityCss() }}">
             @foreach($this->get('logos') as $logoGroup)
                 <div class="fic-flex {{ $this->get('textPosition')->getKey() === 'below' ? 'fic-flex-col' : 'fic-flex-col-reverse' }}">

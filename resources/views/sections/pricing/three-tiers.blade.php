@@ -1,4 +1,4 @@
-<x-lego::section :section="$this" class="fic-bg-white dark:fic-bg-gray-900">
+<x-lego::section class="fic-bg-white dark:fic-bg-gray-900">
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
         <div class="fic-mx-auto fic-max-w-4xl fic-text-center fic-mb-16 sm:fic-mb-20">
             {!! $this->get('eyebrow.copy')->class('fic-text-base fic-leading-7 fic-font-semibold fic-text-accent-600 dark:fic-text-accent-400') !!}
@@ -21,7 +21,7 @@
                         <ul role="list" class="fic-mt-8 fic-space-y-3 fic-text-sm fic-leading-6 fic-text-gray-600 dark:fic-text-gray-300">
                             @foreach($this->get('tiers.one.features') as  $feature)
                                 <li class="fic-flex fic-gap-x-3">
-                                    <x-fab::elements.icon :icon="$feature->icon->key" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600 dark:fic-text-accent-400" />
+                                    <x-fab::elements.icon :icon="$feature->icon->getKey()" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600 dark:fic-text-accent-400" />
                                     {!! $feature->name !!}
                                 </li>
                             @endforeach

@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-px-6 lg:fic-px-8">
         <div class="fic-mx-auto fic-text-center {{ $this->getContainerMaxWidthCss() }}">
             {!! $this->get('eyebrow.copy')->class('fic-text-base fic-font-semibold fic-leading-7 fic-text-accent-600') !!}

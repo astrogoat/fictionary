@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-px-6 fic-py-24 sm:fic-px-6 sm:fic-py-32 lg:fic-px-8">
         <div class="fic-mx-auto fic-max-w-2xl fic-text-center">
             {!! $this->get('heading.copy')->class('fic-text-balance fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-gray-900 sm:fic-text-5xl') !!}

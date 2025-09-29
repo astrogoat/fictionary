@@ -1,4 +1,4 @@
-<x-lego::section :section="$this">
+<x-lego::section>
     <div class="fic-mx-auto fic-max-w-7xl sm:fic-px-6 lg:fic-px-8">
         <div class="fic-relative fic-isolate fic-overflow-hidden fic-bg-gray-900 fic-px-6 fic-pt-16 fic-shadow-2xl sm:fic-rounded-3xl sm:fic-px-16 md:fic-pt-24 lg:fic-flex lg:fic-gap-x-20 lg:fic-px-24 lg:fic-pt-0">
             <svg viewBox="0 0 1024 1024" class="fic-absolute fic-left-1/2 fic-top-1/2 fic--z-10 fic-size-[64rem] fic--translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:fic-left-full sm:fic--ml-80 lg:fic-left-1/2 lg:fic-ml-0 lg:fic--translate-x-1/2 lg:fic-translate-y-0" aria-hidden="true">
