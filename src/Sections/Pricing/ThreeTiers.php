@@ -43,11 +43,6 @@ class ThreeTiers extends Section
                 'one' => Group::name('One')->bricks($tierBricks),
                 'two' => Group::name('Two')->bricks($tierBricks),
                 'three' => Group::name('Three')->bricks($tierBricks),
-//                'extra' => Group::name('Extra')->bricks([
-//                    'name' => Text::name('Name')->renderAsElement('h3'),
-//                    'description' => Text::name('Description'),
-//                    'cta' => Link::name('CTA'),
-//                ]),
             ]),
         ];
     }
