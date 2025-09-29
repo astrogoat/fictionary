@@ -32,9 +32,9 @@
                                 {!! $this->get('tiers.one.description')->class('fic-mt-3 fic-text-base/7 fic-text-gray-600') !!}
                                 @if($this->get('tiers.one.features')->isNotEmpty())
                                     <ul role="list" class="fic-mt-10 fic-space-y-4 fic-text-sm/6 fic-text-gray-600">
-                                        @foreach($this->get('tiers.one.features') as  $feature)
+                                        @foreach($this->get('tiers.one.features') as $feature)
                                             <li class="fic-flex fic-gap-x-3">
-                                                <x-fab::elements.icon :icon="$feature->icon->key" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600" />
+                                                <x-fab::elements.icon :icon="$feature->icon->getKey() ?? ''" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600" />
                                                 {!! $feature->name !!}
                                             </li>
                                         @endforeach
@@ -55,7 +55,7 @@
                                     <ul role="list" class="fic-mt-10 fic-space-y-4 fic-text-sm/6 fic-text-gray-600">
                                         @foreach($this->get('tiers.two.features') as  $feature)
                                             <li class="fic-flex fic-gap-x-3">
-                                                <x-fab::elements.icon :icon="$feature->icon->key" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600" />
+                                                <x-fab::elements.icon :icon="$feature->icon->getKey() ?? ''" class="fic-h-6 fic-w-5 fic-flex-none fic-text-accent-600" />
                                                 {!! $feature->name !!}
                                             </li>
                                         @endforeach
