@@ -24,6 +24,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
             ->sections([
                 Sections\Blog\ThreeColumnWithBackgroundImages::class,
                 Sections\Blog\ThreeColumnWithImages::class,
+                Sections\BentoGrid\TwoRowBentoGridWithThreeColumnSecondRow::class,
                 Sections\CallToAction\CenteredOnDarkPanel::class,
                 Sections\CallToAction\DarkPanelWithImage::class,
                 Sections\CallToAction\SimpleCentered::class,
@@ -67,6 +68,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
 
         Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-background-images', Sections\Blog\ThreeColumnWithBackgroundImages::class);
         Livewire::component('astrogoat.fictionary.sections.blog.three-column-with-images', Sections\Blog\ThreeColumnWithImages::class);
+        Livewire::component('astrogoat.fictionary.sections.bento-grid.two-row-bento-grid-with-three-column-second-row', Sections\BentoGrid\TwoRowBentoGridWithThreeColumnSecondRow::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.centered-on-dark-panel', Sections\CallToAction\CenteredOnDarkPanel::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.dark-panel-with-image', Sections\CallToAction\DarkPanelWithImage::class);
         Livewire::component('astrogoat.fictionary.sections.call-to-action.simple-centered', Sections\CallToAction\SimpleCentered::class);
