@@ -2,7 +2,7 @@
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
         <div class="fic-mx-auto fic-max-w-4xl fic-text-center fic-mb-16 sm:fic-mb-20">
             {!! $this->get('eyebrow.copy')->class('fic-text-base fic-leading-7 fic-font-semibold fic-text-accent-600 dark:fic-text-accent-400') !!}
-            {!! $this->get('heading.copy')->class('fic-mt-2 fic-font-semibold fic-tracking-tight fic-text-gray-900 dark:fic-text-white ' . $this->getHeadingSizeCss()) !!}
+            {!! $this->get('heading.copy')->class('font-headline fic-mt-2 fic-font-semibold fic-tracking-tight fic-text-gray-900 dark:fic-text-white ' . $this->getHeadingSizeCss()) !!}
             {!! $this->get('description.copy')->class('fic-mx-auto fic-mt-6 fic-max-w-2xl fic-text-center fic-text-lg fic-font-medium fic-text-gray-600 sm:fic-text-xl sm:fic-leading-8 dark:fic-text-gray-400') !!}
         </div>
         <div class="fic-isolate fic-mx-auto fic-grid fic-max-w-md fic-grid-cols-1 fic-gap-y-8 lg:fic-mx-0 lg:fic-max-w-none lg:fic-grid-cols-3">

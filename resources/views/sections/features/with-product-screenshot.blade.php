@@ -6,7 +6,7 @@
                     <div class="lg:fic-max-w-lg">
                         {!! $this->get('eyebrow')->class('fic-text-base fic-font-semibold fic-leading-7 fic-text-accent-600') !!}
                         {!! $this->get('heading')->class('font-headline fic-mt-2 fic-text-3xl fic-font-bold fic-tracking-tight fic-text-gray-900 sm:fic-text-4xl') !!}
-                        {!! $this->get('description')->class('fic-mt-6 fic-text-lg fic-leading-7 sm:fic-leading-8 fic-text-gray-600') !!}
+                        {!! $this->get('description')->class('fic-mt-6 fic-text-lg fic-leading-7 fic-text-gray-600') !!}
                         <dl class="fic-mt-10 fic-max-w-xl fic-space-y-8 fic-text-base fic-leading-7 fic-text-gray-600 lg:fic-max-w-none">
                             @foreach($this->get('callouts') as $callout)
                                 <div class="fic-relative fic-pl-9">

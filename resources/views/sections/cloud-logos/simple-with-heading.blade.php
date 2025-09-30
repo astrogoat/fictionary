@@ -1,7 +1,7 @@
 <x-lego::section>
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
-        {!! $this->get('heading')->class('font-headline fic-text-center fic-text-2xl sm:fic-text-4xl fic-font-semibold fic-leading-8 fic-text-gray-900') !!}
-        <div class="fic-mx-auto fic-mt-10 fic-items-center fic-grid {{ $this->getIconDensityCss() }}">
+        {!! $this->get('heading')->class('font-headline fic-text-center fic-text-3xl sm:fic-text-5xl fic-font-semibold fic-leading-8 fic-text-gray-900') !!}
+        <div class="fic-mx-auto fic-mt-12 fic-items-center fic-grid {{ $this->getIconDensityCss() }}">
             @foreach($this->get('logos') as $logoGroup)
                 <div class="fic-flex {{ $this->get('textPosition')->getKey() === 'below' ? 'fic-flex-col' : 'fic-flex-col-reverse' }}">
                     {!! $logoGroup->media->class('fic-text-accent-600 fic-col-span-2 fic-w-full fic-object-contain lg:fic-col-span-1 ' . $this->getMaxIconHeightCss()) !!}

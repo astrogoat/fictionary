@@ -1,7 +1,9 @@
 <x-lego::section>
     <div class="fic-mx-auto fic-max-w-2xl fic-px-6 lg:fic-max-w-7xl lg:fic-px-8">
-        {!! $this->get('eyebrow.copy')->class('fic-text-base fic-leading-7 fic-font-semibold fic-text-indigo-600') !!}
-        {!! $this->get('heading.copy')->class('fic-mt-2 fic-max-w-lg fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-gray-950 sm:fic-text-5xl ' . $this->getHeadingSizeCss()) !!}
+        <div class="fic-mx-auto fic-max-w-2xl fic-text-center">
+            {!! $this->get('eyebrow.copy')->class('fic-text-base fic-leading-7 fic-font-semibold fic-text-indigo-600') !!}
+            {!! $this->get('heading.copy')->class('font-headline fic-mt-2 fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-gray-950 sm:fic-text-5xl ' . $this->getHeadingSizeCss()) !!}
+        </div>
         <div class="fic-mt-10 fic-grid fic-grid-cols-1 fic-gap-4 sm:fic-mt-16 lg:fic-grid-cols-6 lg:fic-grid-rows-2">
             <div class="fic-relative lg:fic-col-span-3">
                 <div class="fic-absolute fic-inset-0 fic-rounded-lg fic-bg-white max-lg:fic-rounded-t-[2rem] lg:fic-rounded-tl-[2rem]"></div>
