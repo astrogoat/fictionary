@@ -43,13 +43,10 @@
                                 !!}
                                 {!! $this->get('cta.inputButton')->class('fic-rounded-md fic-bg-accent-600 fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-white fic-shadow-sm hover:fic-bg-accent-600/80 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-accent-600 fic-whitespace-nowrap') !!}
                             </div>
-                            @if($this->signUpSuccessful === false)
-                                {{ $this->subscribedMessage }}
-                            @endif
                         </form>
                     @else
                         <div class="fic-flex fic-mt-6 fic-mb-14 fic-font-bold">
-                            {{ $this->subscribedMessage }}
+                            {!! $this->subscribedMessage !!}
                         </div>
                     @endunless
                 @endif
