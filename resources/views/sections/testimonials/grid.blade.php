@@ -8,7 +8,7 @@
     <div class="fic-mx-auto fic-max-w-7xl fic-px-6 lg:fic-px-8">
         <div class="fic-mx-auto fic-max-w-2xl fic-text-center">
             {!! $this->get('heading.eyebrow')->class('fic-text-base/7 fic-font-semibold fic-text-indigo-600') !!}
-            {!! $this->get('heading.heading')->class('fic-mt-2 fic-text-balance fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-gray-900 sm:fic-text-5xl') !!}
+            {!! $this->get('heading.heading')->class('font-headline fic-mt-2 fic-text-balance fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-gray-900 sm:fic-text-5xl') !!}
         </div>
         <div class="fic-mx-auto {{ $this->get('heading.heading')->hasContent() ? 'fic-mt-16' : '' }} fic-grid fic-max-w-2xl fic-grid-cols-1 fic-grid-rows-1 fic-gap-8 fic-text-sm/6 fic-text-gray-900 sm:fic-mt-20 sm:fic-grid-cols-2 xl:fic-mx-0 xl:fic-max-w-none xl:fic-grid-flow-col xl:fic-grid-cols-4">
             @php($prominent = $this->get('testimonials.prominent'))
