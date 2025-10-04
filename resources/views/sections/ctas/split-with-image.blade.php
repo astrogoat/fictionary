@@ -15,7 +15,7 @@
         <div class="fic-relative fic-mx-auto fic-max-w-7xl fic-py-24 sm:fic-py-32 lg:fic-px-8 lg:fic-py-40">
             <div class="fic-pl-6 fic-pr-6 md:fic-ml-auto md:fic-w-2/3 md:fic-pl-16 lg:fic-w-1/2 lg:fic-pl-24 lg:fic-pr-0 xl:fic-pl-32">
                 {!! $this->get('content.eyebrow')->class('fic-text-base/7 fic-font-semibold fic-text-accent-400') !!}
-                {!! $this->get('content.title')->class('fic-mt-2 fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-5xl') !!}
+                {!! $this->get('content.title')->class('font-headline fic-mt-2 fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-5xl') !!}
                 {!! $this->get('content.description')->class('fic-mt-6 fic-text-base/7 fic-text-gray-300') !!}
 {{--                <h2 class="fic-text-base/7 fic-font-semibold fic-text-accent-400">Award winning support</h2>--}}
 {{--                <p class="fic-mt-2 fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-5xl">We’re here to help</p>--}}

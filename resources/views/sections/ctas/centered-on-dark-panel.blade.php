@@ -1,7 +1,7 @@
 <x-lego::section>
     <div class="fic-mx-auto fic-max-w-7xl sm:fic-px-6 lg:fic-px-8">
         <div class="fic-relative fic-isolate fic-overflow-hidden fic-bg-gray-900 fic-px-6 fic-py-24 fic-text-center fic-shadow-2xl sm:fic-rounded-3xl sm:fic-px-16">
-            {!! $this->get('heading.copy')->class('fic-text-balance fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-5xl') !!}
+            {!! $this->get('heading.copy')->class('font-headline fic-text-balance fic-text-4xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-5xl') !!}
             {!! $this->get('description.copy')->class('fic-mx-auto fic-mt-6 fic-max-w-xl fic-text-pretty fic-text-lg/8 fic-text-gray-300') !!}
             <div class="fic-mt-10 fic-flex fic-items-center fic-justify-center fic-gap-x-6">
                 {!! $this->get('ctas.primary')->class('fic-rounded-md fic-bg-white fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-gray-900 fic-shadow-sm hover:fic-bg-gray-100 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-white') !!}

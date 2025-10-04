@@ -11,7 +11,7 @@
                 </defs>
             </svg>
             <div class="fic-mx-auto fic-max-w-md fic-text-center lg:fic-mx-0 lg:fic-flex-auto lg:fic-py-32 lg:fic-text-left">
-                {!! $this->get('heading.copy')->class('fic-text-balance fic-text-3xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-4xl') !!}
+                {!! $this->get('heading.copy')->class('font-headline fic-text-balance fic-text-3xl fic-font-semibold fic-tracking-tight fic-text-white sm:fic-text-4xl') !!}
                 {!! $this->get('description.copy')->class('fic-mt-6 fic-text-pretty fic-text-lg/8 fic-text-gray-300') !!}
                 <div class="fic-mt-10 fic-flex fic-items-center fic-justify-center fic-gap-x-6 lg:fic-justify-start">
                     {!! $this->get('ctas.primary')->class('fic-rounded-md fic-bg-white fic-px-3.5 fic-py-2.5 fic-text-sm fic-font-semibold fic-text-gray-900 fic-shadow-sm hover:fic-bg-gray-100 focus-visible:fic-outline focus-visible:fic-outline-2 focus-visible:fic-outline-offset-2 focus-visible:fic-outline-white') !!}
