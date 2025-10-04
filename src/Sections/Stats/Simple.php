@@ -9,9 +9,13 @@ use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
+use Helix\Lego\Contracts\SupportsContentVariations;
+use Astrogoat\Fictionary\Traits\HasContentVariations;
 
-class Simple extends Section
+class Simple extends Section implements SupportsContentVariations
 {
+    use HasContentVariations;
+
     protected $view = 'fictionary::sections.stats.simple';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/stats/simple.jpg';
 

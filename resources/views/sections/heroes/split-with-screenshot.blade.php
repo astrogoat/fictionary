@@ -5,8 +5,14 @@
             aria-hidden="true"
         >
             <defs>
-                <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
-                         patternUnits="userSpaceOnUse">
+                <pattern
+                    id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+                    width="200"
+                    height="200"
+                    x="50%"
+                    y="-1"
+                    patternUnits="userSpaceOnUse"
+                >
                     <path d="M.5 200V.5H200" fill="none"/>
                 </pattern>
             </defs>
@@ -21,17 +27,17 @@
                     <div class="">
                         <div class="fic-inline-flex fic-space-x-6">
                             <span
-                                class="fic-rounded-full fic-bg-accent-600/10 fic-px-3 fic-py-1 fic-text-sm fic-font-semibold fic-leading-6 fic-text-accent-600 fic-ring-1 fic-ring-inset fic-ring-accent-600/10">{{ $this->get('update')->badge }}</span>
+                                class="fic-rounded-full fic-bg-accent-600/10 fic-px-3 fic-py-1 fic-text-sm fic-font-semibold fic-leading-6 fic-text-accent-600 fic-ring-1 fic-ring-inset fic-ring-accent-600/10">{!! $this->get('update')->badge !!}</span>
                             <span
                                 class="fic-inline-flex fic-items-center fic-space-x-2 fic-text-sm fic-font-medium fic-leading-6 fic-text-gray-600">
-                                <span>{{ $this->get('update.update') }}</span>
+                                <span>{!! $this->get('update.update') !!}</span>
                             </span>
                         </div>
                     </div>
                 @endif
 
-                <h1 class="font-headline fic-mt-10 fic-text-4xl fic-font-bold fic-tracking-tight fic-text-gray-900 sm:fic-text-6xl">{{ $this->get('heading') }}</h1>
-                <p class="fic-mt-6 fic-text-lg fic-leading-8 fic-text-gray-600">{!! $this->get('subheading') !!}</p>
+                <h1 class="font-headline fic-mt-10 fic-text-4xl fic-font-bold fic-tracking-tight fic-text-gray-900 sm:fic-text-6xl">{!! $this->get('heading') !!}</h1>
+                <p class="fic-mt-6 fic-text-base md:fic-text-lg  fic-leading-6 md:fic-leading-7 fic-text-gray-600">{!! $this->get('subheading') !!}</p>
 
                 @if(in_array($this->get('cta.mode')->getKey(), ['input', 'both']))
                     @unless($this->signUpSuccessful)

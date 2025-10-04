@@ -8,9 +8,13 @@ use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
+use Helix\Lego\Contracts\SupportsContentVariations;
+use Astrogoat\Fictionary\Traits\HasContentVariations;
 
-class SimpleWithHeading extends Section
+class SimpleWithHeading extends Section implements SupportsContentVariations
 {
+    use HasContentVariations;
+
     protected string $view = 'fictionary::sections.cloud-logos.simple-with-heading';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/cloud-logos/simple-with-heading.jpg';
 

@@ -8,7 +8,7 @@
             <div class="fic-relative lg:fic-col-span-3">
                 <div class="fic-absolute fic-inset-0 fic-rounded-lg fic-bg-white max-lg:fic-rounded-t-[2rem] lg:fic-rounded-tl-[2rem]"></div>
                 <div class="fic-relative fic-flex fic-h-full fic-flex-col fic-overflow-hidden fic-rounded-lg max-lg:fic-rounded-t-[calc(2rem+1px)] lg:fic-rounded-tl-[calc(2rem+1px)]">
-                    {!! $this->get('grid.first.media')->class('fic-h-80 fic-object-cover fic-object-left') !!}
+                    {!! $this->get('grid.first.media')->class('fic-h-80 fic-object-cover') !!}
                     <div class="fic-p-10 fic-pt-4">
                         {!! $this->get('grid.first.eyebrow')->class('fic-text-sm fic-leading-4 fic-font-semibold fic-text-indigo-600') !!}
                         {!! $this->get('grid.first.title')->class('fic-mt-2 fic-text-lg fic-font-medium fic-tracking-tight fic-text-gray-950') !!}
@@ -20,7 +20,7 @@
             <div class="fic-relative lg:fic-col-span-3">
                 <div class="fic-absolute fic-inset-0 fic-rounded-lg fic-bg-white lg:fic-rounded-tr-[2rem]"></div>
                 <div class="fic-relative fic-flex fic-h-full fic-flex-col fic-overflow-hidden fic-rounded-lg lg:fic-rounded-tr-[calc(2rem+1px)]">
-                    {!! $this->get('grid.second.media')->class('fic-h-80 fic-object-cover fic-object-left lg:fic-object-right') !!}
+                    {!! $this->get('grid.second.media')->class('fic-h-80 fic-object-cover') !!}
                     <div class="fic-p-10 fic-pt-4">
                         {!! $this->get('grid.second.eyebrow')->class('fic-text-sm fic-leading-4 fic-font-semibold fic-text-indigo-600') !!}
                         {!! $this->get('grid.second.title')->class('fic-mt-2 fic-text-lg fic-font-medium fic-tracking-tight fic-text-gray-950') !!}
@@ -32,7 +32,7 @@
             <div class="fic-relative lg:fic-col-span-2">
                 <div class="fic-absolute fic-inset-0 fic-rounded-lg fic-bg-white lg:fic-rounded-bl-[2rem]"></div>
                 <div class="fic-relative fic-flex fic-h-full fic-flex-col fic-overflow-hidden fic-rounded-lg lg:fic-rounded-bl-[calc(2rem+1px)]">
-                    {!! $this->get('grid.third.media')->class('fic-h-80 fic-object-cover fic-object-left') !!}
+                    {!! $this->get('grid.third.media')->class('fic-h-80 fic-object-cover') !!}
                     <div class="fic-p-10 fic-pt-4">
                         {!! $this->get('grid.third.eyebrow')->class('fic-text-sm fic-leading-4 fic-font-semibold fic-text-indigo-600') !!}
                         {!! $this->get('grid.third.title')->class('fic-mt-2 fic-text-lg fic-font-medium fic-tracking-tight fic-text-gray-950') !!}
@@ -44,7 +44,8 @@
             <div class="fic-relative lg:fic-col-span-2">
                 <div class="fic-absolute fic-inset-0 fic-rounded-lg fic-bg-white"></div>
                 <div class="fic-relative fic-flex fic-h-full fic-flex-col fic-overflow-hidden fic-rounded-lg">
-                    {!! $this->get('grid.fourth.media')->class('fic-h-80 fic-object-cover') !!}
+                        {!! $this->getContentVariation('grid.fourth.media')->class('fic-h-80 fic-object-cover') !!}
+{{--                    {!! $this->get('grid.fourth.media')->class('fic-h-80 fic-object-cover') !!}--}}
                     <div class="fic-p-10 fic-pt-4">
                         {!! $this->get('grid.fourth.eyebrow')->class('fic-text-sm fic-leading-4 fic-font-semibold fic-text-indigo-600') !!}
                         {!! $this->get('grid.fourth.title')->class('fic-mt-2 fic-text-lg fic-font-medium fic-tracking-tight fic-text-gray-950') !!}

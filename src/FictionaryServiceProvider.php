@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Fictionary;
 
+use Closure;
 use Astrogoat\Fictionary\Settings\FictionarySettings;
 use Astrogoat\Fictionary\Settings\Peripherals\Theming;
 use Helix\Lego\Apps\App;
@@ -12,6 +13,9 @@ use Spatie\LaravelPackageTools\Package;
 
 class FictionaryServiceProvider extends AppPackageServiceProvider
 {
+    public static Closure|null $cssForShowingPerVariation = null;
+    public static Closure|null $cssForHidingPerVariation = null;
+
     public function registerApp(App $app): App
     {
         return $app

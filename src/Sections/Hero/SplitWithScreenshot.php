@@ -13,9 +13,13 @@ use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Http\Livewire\Section;
+use Helix\Lego\Contracts\SupportsContentVariations;
+use Astrogoat\Fictionary\Traits\HasContentVariations;
 
-class SplitWithScreenshot extends Section
+class SplitWithScreenshot extends Section implements SupportsContentVariations
 {
+    use HasContentVariations;
+
     protected string $view = 'fictionary::sections.heroes.split-with-screenshot';
     protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/heroes/split-with-screenshot.jpg';
 
