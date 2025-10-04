@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Fictionary;
 
-use Closure;
 use Astrogoat\Fictionary\Settings\FictionarySettings;
 use Astrogoat\Fictionary\Settings\Peripherals\Theming;
+use Closure;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
 use Illuminate\Support\Facades\Blade;

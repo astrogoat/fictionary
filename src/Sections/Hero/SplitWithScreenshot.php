@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Fictionary\Sections\Hero;
 
+use Astrogoat\Fictionary\Traits\HasContentVariations;
 use Closure;
 use Exception;
 use Helix\Lego\Bricks\Button;
@@ -12,9 +13,8 @@ use Helix\Lego\Bricks\Link;
 use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
-use Helix\Lego\Http\Livewire\Section;
 use Helix\Lego\Contracts\SupportsContentVariations;
-use Astrogoat\Fictionary\Traits\HasContentVariations;
+use Helix\Lego\Http\Livewire\Section;
 
 class SplitWithScreenshot extends Section implements SupportsContentVariations
 {

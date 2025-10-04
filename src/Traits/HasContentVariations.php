@@ -2,8 +2,8 @@
 
 namespace Astrogoat\Fictionary\Traits;
 
-use Closure;
 use Astrogoat\Fictionary\FictionaryServiceProvider;
+use Closure;
 
 trait HasContentVariations
 {

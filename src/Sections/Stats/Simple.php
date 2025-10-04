@@ -2,15 +2,15 @@
 
 namespace Astrogoat\Fictionary\Sections\Stats;
 
+use Astrogoat\Fictionary\Traits\HasContentVariations;
 use Helix\Lego\Bricks\Brick;
 use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Bricks\Number;
 use Helix\Lego\Bricks\Repeater;
 use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
-use Helix\Lego\Http\Livewire\Section;
 use Helix\Lego\Contracts\SupportsContentVariations;
-use Astrogoat\Fictionary\Traits\HasContentVariations;
+use Helix\Lego\Http\Livewire\Section;
 
 class Simple extends Section implements SupportsContentVariations
 {
