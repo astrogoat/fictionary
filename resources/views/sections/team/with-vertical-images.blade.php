@@ -7,7 +7,7 @@
         <ul role="list" class="fic--mt-12 fic-space-y-12 fic-divide-y fic-divide-gray-200 xl:fic-col-span-3">
             @foreach($this->get('rows.rows') as $row)
                 <li class="fic-flex fic-flex-col fic-gap-10 fic-pt-12 sm:fic-flex-row">
-                    {!! $row->media->class('fic-aspect-[4/5] fic-w-52 fic-flex-none fic-rounded-2xl fic-object-cover') !!}
+                    {!! $row->media->class('fic-aspect-[4/5] fic-max-h-64 fic-w-52 fic-flex-none fic-rounded-2xl fic-object-cover') !!}
                     <div class="fic-max-w-xl fic-flex-auto">
                         {!! $row->title->class('fic-text-lg/8 fic-font-semibold fic-tracking-tight fic-text-gray-900') !!}
                         {!! $row->description->class('fic-text-base/7 fic-text-gray-600') !!}
