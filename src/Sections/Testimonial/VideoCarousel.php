@@ -2,25 +2,25 @@
 
 namespace Astrogoat\Fictionary\Sections\Testimonial;
 
+use Astrogoat\Fictionary\Traits\CommonSection;
+use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Bricks\Group;
 use Helix\Lego\Bricks\Media;
 use Helix\Lego\Bricks\Number;
-use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Repeater;
+use Helix\Lego\Bricks\Select;
 use Helix\Lego\Bricks\Text;
 use Helix\Lego\Bricks\Video;
-use Helix\Lego\Bricks\Checkbox;
 use Helix\Lego\Http\Livewire\Section;
-use Astrogoat\Fictionary\Traits\CommonSection;
 
 class VideoCarousel extends Section
 {
     use CommonSection;
 
     protected string $view = 'fictionary::sections.testimonials.video-carousel';
-//    protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/testimonials/carousel.jpg';
+    //    protected static ?string $thumbnail = 'vendor/fictionary/section-thumbnails/testimonials/carousel.jpg';
 
-    public function bricks() : array
+    public function bricks(): array
     {
         $options = [
             'slidesPerView' => Select::name('Slides per view')
