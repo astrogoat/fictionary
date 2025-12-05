@@ -1,11 +1,11 @@
-// let CountUp = require('countup.js')
-// window.CountUp = CountUp
 import {CountUp} from "countup.js";
 window.CountUp = CountUp
-// console.log(CountUp, window.CountUp)
-// const countUp = new CountUp('targetId', 5234);
-// if (!countUp.error) {
-//     countUp.start();
-// } else {
-//     console.error(countUp.error);
-// }
+
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+window.Swiper = Swiper;
+Swiper.use([Navigation, Pagination]);
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';

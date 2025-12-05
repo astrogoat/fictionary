@@ -51,6 +51,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
                 Sections\Stats\Simple::class,
                 Sections\Team\WithVerticalImages::class,
                 Sections\Testimonial\Grid::class,
+                Sections\Testimonial\VideoCarousel::class,
             ])
             ->publishOnInstall(['public'])
             ->backendRoutes(__DIR__.'/../routes/backend.php')
@@ -95,6 +96,7 @@ class FictionaryServiceProvider extends AppPackageServiceProvider
         Livewire::component('astrogoat.fictionary.sections.stats.simple', Sections\Stats\Simple::class);
         Livewire::component('astrogoat.fictionary.sections.team.with-vertical-images', Sections\Team\WithVerticalImages::class);
         Livewire::component('astrogoat.fictionary.sections.testimonial.grid', Sections\Testimonial\Grid::class);
+        Livewire::component('astrogoat.fictionary.sections.testimonial.video-carousel', Sections\Testimonial\VideoCarousel::class);
 
         Livewire::component('astrogoat.fictionary.settings.peripherals.theming', Theming::class);
     }
