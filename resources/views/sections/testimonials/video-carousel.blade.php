@@ -1,5 +1,5 @@
 <x-lego::section>
-    <div class="fic-mx-auto">
+    <div class="fic-mx-auto" x-cloak x-data>
         {!! $this->get('title')->class('fic-text-3xl lg:fic-text-5xl fic-font-sans fic-uppercase fic-text-center fic-mb-6') !!}
 
         <div
